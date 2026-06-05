@@ -1,1 +1,5 @@
-﻿{"buildCommand":"cd spotify-clone-v4/frontend && npm install && npm run build","outputDirectory":"spotify-clone-v4/frontend/build","installCommand":"cd spotify-clone-v4/frontend && npm install"}
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
