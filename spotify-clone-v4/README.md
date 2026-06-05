@@ -1,17 +1,4 @@
-# Realtime Spotify Clone
 
-Proyecto migrado a **Tailwind CSS v4** con Vite v6.
-
-## Cambios realizados (v3 → v4)
-
-- ✅ `tailwindcss` actualizado a v4
-- ✅ Añadido `@tailwindcss/vite` como plugin de Vite
-- ✅ Eliminado `postcss.config.js` (ya no necesario)
-- ✅ Eliminado `tailwind.config.js` (configuración movida a `index.css` con `@theme`)
-- ✅ `vite.config.ts` actualizado con el plugin de Tailwind v4
-- ✅ `index.css` migrado: `@tailwind base/components/utilities` → `@import "tailwindcss"`
-- ✅ Colores y variables del tema migrados a `@theme {}`
-- ✅ Vite actualizado a v6
 
 ## Requisitos previos
 
