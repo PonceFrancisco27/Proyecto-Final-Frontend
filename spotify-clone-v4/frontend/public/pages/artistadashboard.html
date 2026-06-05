@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="artistdashboard.css">
+    
+    <title>MusicGround - Dashboard de Artista</title>
+</head>
+<body>
+
+<div id="artist-dashboard">
+    <!-- NAVBAR SUPERIOR -->
+    <nav class="top-navbar">
+        <div class="logo">
+            <i class='bx bx-ghost'></i>
+            <span>MusicGround</span>
+        </div>
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="artist-dashboard.html" class="active">Mi Dashboard</a>
+            <a href="/player">Reproductor</a>
+        </div>
+        <div class="nav-actions">
+            <div class="user-dropdown" id="userDropdown">
+                <div class="user-btn" onclick="toggleDropdown()">
+                    <i class='bx bx-user-circle'></i>
+                    <span id="userNameDisplay">Artista</span>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <div class="dropdown-header">
+                        <div class="dropdown-avatar" id="dropdownAvatar">
+                            <i class='bx bx-user-circle'></i>
+                        </div>
+                        <div>
+                            <strong id="dropdownUserName">Artista</strong>
+                            <small id="dropdownUserEmail">artista@musicground.com</small>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" onclick="handleLogout()" class="logout-item"><i class='bx bx-log-out'></i> Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="artist-profile-card">
+                <div class="profile-image-container">
+                    <div class="artist-avatar-large" id="profileAvatar">
+                        <img id="profileImage" src="" alt="">
+                        <i class='bx bx-user-circle' id="defaultAvatarIcon"></i>
+                    </div>
+                    <button class="add-photo-btn" onclick="triggerFileUpload()" title="Subir foto">
+                        <i class='bx bx-plus'></i>
+                    </button>
+                    <input type="file" id="profileImageInput" accept="image/jpeg, image/png, image/jpg" style="display: none;">
+                </div>
+                <h3 id="profileArtistName">Artista</h3>
+                <p id="profileArtistEmail">artista@musicground.com</p>
+                <span class="artist-badge">Artista Verificado</span>
+            </div>
+            <div class="sidebar-menu">
+                <a href="#resumen" class="active" data-section="resumen">
+                    <i class='bx bx-home'></i>
+                    <span>Resumen</span>
+                </a>
+                <a href="#subir" data-section="subir">
+                    <i class='bx bx-cloud-upload'></i>
+                    <span>Subir Música</span>
+                </a>
+                <a href="#mis-canciones" data-section="mis-canciones">
+                    <i class='bx bx-music'></i>
+                    <span>Mis Canciones</span>
+                </a>
+                <a href="#estadisticas" data-section="estadisticas">
+                    <i class='bx bx-stats'></i>
+                    <span>Estadísticas</span>
+                </a>
+                <a href="#regalias" data-section="regalias">
+                    <i class='bx bx-dollar-circle'></i>
+                    <span>Regalías</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Sección Resumen -->
+            <div id="resumen" class="dashboard-section active">
+                <div class="section-header">
+                    <h1>Bienvenido de vuelta, <span id="welcomeArtistName">Artista</span></h1>
+                    <p>Este es tu resumen de rendimiento como artista</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class='bx bx-headphone'></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="totalStreams">0</span>
+                            <span class="stat-label">Reproducciones totales</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class='bx bx-user'></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="totalListeners">0</span>
+                            <span class="stat-label">Oyentes únicos</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class='bx bx-dollar-circle'></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="totalEarnings">$0</span>
+                            <span class="stat-label">Ganancias totales</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class='bx bx-calendar'></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="memberDays">0</span>
+                            <span class="stat-label">Días en la plataforma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="top-songs">
+                    <h2>Tus canciones más escuchadas</h2>
+                    <div class="songs-table" id="topSongsTable"></div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Actividad reciente</h2>
+                    <div class="activity-list" id="recentActivity"></div>
+                </div>
+            </div>
+
+            <!-- Sección Subir Música -->
+            <div id="subir" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Subir nueva música</h1>
+                    <p>Comparte tu arte con el mundo</p>
+                </div>
+
+                <div class="upload-form">
+                    <div class="upload-area" id="uploadArea" onclick="document.getElementById('audioFile').click()">
+                        <div class="upload-icon">
+                            <i class='bx bx-cloud-upload'></i>
+                        </div>
+                        <div class="upload-text">
+                            <h3>Arrastra o haz clic para subir</h3>
+                            <p>Formatos soportados: MP3, WAV, FLAC (máx. 50MB)</p>
+                        </div>
+                        <input type="file" id="audioFile" accept=".mp3,.wav,.flac" style="display: none;">
+                    </div>
+
+                    <div class="upload-info" id="uploadInfo" style="display: none;">
+                        <div class="upload-preview">
+                            <i class='bx bx-music'></i>
+                            <div>
+                                <h4 id="uploadFileName"></h4>
+                                <p id="uploadFileSize"></p>
+                            </div>
+                            <span class="upload-status" id="uploadStatus">Procesando...</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Título de la canción</label>
+                        <input type="text" id="songTitle" placeholder="Ej: Mi nueva canción">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Género</label>
+                            <select id="songGenre">
+                                <option value="Pop">Pop</option>
+                                <option value="Rock">Rock</option>
+                                <option value="Hip Hop">Hip Hop</option>
+                                <option value="Electrónica">Electrónica</option>
+                                <option value="Reggaeton">Reggaeton</option>
+                                <option value="Alternativo">Alternativo</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Idioma</label>
+                            <select id="songLanguage">
+                                <option value="Español">Español</option>
+                                <option value="Inglés">Inglés</option>
+                                <option value="Portugués">Portugués</option>
+                                <option value="Francés">Francés</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción (opcional)</label>
+                        <textarea id="songDescription" rows="3" placeholder="Cuéntanos sobre esta canción..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Subir portada</label>
+                        <div class="cover-upload" onclick="document.getElementById('coverImage').click()">
+                            <div id="coverPreview" class="cover-preview">
+                                <i class='bx bx-image-add'></i>
+                                <span>Seleccionar imagen</span>
+                            </div>
+                            <input type="file" id="coverImage" accept="image/jpeg, image/png, image/jpg" style="display: none;">
+                        </div>
+                    </div>
+                    <button class="upload-btn" onclick="uploadSong()">Publicar canción</button>
+                </div>
+            </div>
+
+            <!-- Sección Mis Canciones -->
+            <div id="mis-canciones" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Mis canciones</h1>
+                    <p>Gestiona tu catálogo musical</p>
+                </div>
+                <div class="songs-management" id="songsManagement"></div>
+            </div>
+
+            <!-- Sección Estadísticas -->
+            <div id="estadisticas" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Estadísticas detalladas</h1>
+                    <p>Analiza el rendimiento de tu música</p>
+                </div>
+
+                <div class="stats-detail-grid">
+                    <div class="stats-detail-card">
+                        <h3>Por género</h3>
+                        <div class="genre-stats" id="genreStats"></div>
+                    </div>
+                    <div class="stats-detail-card">
+                        <h3>Por país</h3>
+                        <div class="country-stats" id="countryStats"></div>
+                    </div>
+                    <div class="stats-detail-card full-width">
+                        <h3>Reproducciones por día (última semana)</h3>
+                        <div class="weekly-stats" id="weeklyStats"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Regalías -->
+            <div id="regalias" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Regalías</h1>
+                    <p>Gestiona tus ganancias y pagos</p>
+                </div>
+
+                <div class="royalties-summary">
+                    <div class="royalty-card">
+                        <h3>Este mes</h3>
+                        <div class="royalty-amount" id="monthlyEarnings">$0</div>
+                        <span>+12% vs mes anterior</span>
+                    </div>
+                    <div class="royalty-card">
+                        <h3>Próximo pago</h3>
+                        <div class="royalty-amount" id="nextPayout">$0</div>
+                        <span>Fecha estimada: 15 de junio, 2026</span>
+                    </div>
+                    <div class="royalty-card">
+                        <h3>Total acumulado</h3>
+                        <div class="royalty-amount" id="totalEarningsRoyalty">$0</div>
+                        <span>Desde tu registro</span>
+                    </div>
+                </div>
+
+                <div class="withdraw-section">
+                    <h3>Solicitar retiro</h3>
+                    <div class="withdraw-form">
+                        <div class="form-group">
+                            <label>Monto a retirar</label>
+                            <input type="number" id="withdrawAmount" placeholder="0.00">
+                        </div>
+                        <div class="form-group">
+                            <label>Método de pago</label>
+                            <select id="paymentMethod">
+                                <option value="paypal">PayPal</option>
+                                <option value="bank">Transferencia bancaria</option>
+                            </select>
+                        </div>
+                        <button class="withdraw-btn" onclick="requestWithdraw()">Solicitar retiro</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<script src="artist-dashboard.js"></script>
+</body>
+</html>

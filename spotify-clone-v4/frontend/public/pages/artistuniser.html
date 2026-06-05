@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="artistuniser.css">
+    
+    <title>MusicGround - Acceso Artistas</title>
+</head>
+<body>
+
+<div class="back-home">
+    <a href="/" class="back-link" data-i18n="back_home">
+        <i class='bx bx-arrow-back'></i> Volver al inicio
+    </a>
+</div>
+
+<div id="login-view" class="view active">
+    <div class="container" id="container">
+        <!-- Formulario de Registro - Redirige a artistpro.html -->
+        <div class="form-container sign-up-container">
+            <form action="#" onsubmit="event.preventDefault(); goToArtistPro()">
+                <h1 data-i18n="create_artist_account">Crear Cuenta de Artista</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span data-i18n="artist_benefits">Distribuye tu música, monetiza y llega a más oyentes</span>
+                <div class="artist-benefits-list">
+                    <div class="benefit-item">
+                        <i class='bx bx-check-circle'></i>
+                        <span data-i18n="benefit_upload">Subidas ilimitadas</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class='bx bx-check-circle'></i>
+                        <span data-i18n="benefit_royalties">70% de regalías</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class='bx bx-check-circle'></i>
+                        <span data-i18n="benefit_stats">Estadísticas en tiempo real</span>
+                    </div>
+                </div>
+                <button type="submit" class="artist-register-btn" data-i18n="become_artist">Convertirse en Artista →</button>
+                <p class="form-note" data-i18n="artist_note">Al registrarte, aceptas nuestros <a href="terms.html">Términos para Artistas</a></p>
+            </form>
+        </div>
+        
+        <!-- Formulario de Inicio de Sesión para Artistas -->
+        <div class="form-container sign-in-container">
+            <form action="#" onsubmit="event.preventDefault(); handleArtistSignIn()">
+                <div class="artist-badge-header">
+                    <i class='bx bx-mic'></i>
+                
+                </div>
+                <h1 data-i18n="artist_sign_in_title">Acceso Artistas</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-google"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <span data-i18n="or_use_account">O usa tu cuenta asociada</span>
+                <input type="email" placeholder="Email" id="signin-email" required data-i18n-placeholder="email" />
+                <input type="password" placeholder="Contraseña" id="signin-password" required data-i18n-placeholder="password" />
+                <a href="#" data-i18n="forgot_password">¿Olvidaste la clave?</a>
+                <button type="submit" class="artist-login-btn" data-i18n="sign_in">Ingresar como Artista</button>
+                <div class="artist-info-note">
+                    <i class='bx bx-info-circle'></i>
+                    <span data-i18n="artist_note_access">Acceso exclusivo para artistas registrados en MusicGround</span>
+                </div>
+            </form>
+        </div>
+        
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <div class="overlay-icon">
+                        <i class='bx bx-mic'></i>
+                    </div>
+                    <h1 data-i18n="artist_welcome_back">¿Ya eres artista?</h1>
+                    <p data-i18n="artist_welcome_desc">Inicia sesión para acceder a tu panel de control, subir música y ver tus estadísticas.</p>
+                    <button class="ghost" id="signIn" data-i18n="sign_in_btn">Iniciar Sesión</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <div class="overlay-icon">
+                        <i class='bx bx-headphone'></i>
+                    </div>
+                    <h1 data-i18n="artist_new">¿Nuevo artista?</h1>
+                    <p data-i18n="artist_new_desc">Únete a MusicGround y comparte tu música con el mundo. Distribuye, monetiza y crece.</p>
+                    <button class="ghost" id="signUp" data-i18n="sign_up_btn">Crear Cuenta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bottom-controls">
+    <div class="controls-container">
+        <div class="language-selector">
+            <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">🇪🇸 Español</button>
+            <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">🇺🇸 English</button>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="bx bx-moon"></i>
+        </button>
+    </div>
+</div>
+
+<script src="languages.js"></script>
+<script src="theme.js"></script>
+<script src="artist-login.js"></script>
+
+</body>
+</html>

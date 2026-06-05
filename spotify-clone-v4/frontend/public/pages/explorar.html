@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="explorar.css">
+    <link rel="stylesheet" href="player.css">
+    
+    <title>MusicGround</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-content">
+        <a href="/" class="logo">
+            <span class="material-icons-round">graphic_eq</span>
+            <span>MusicGround</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/mg/explorar" class="active">Explorar</a>
+            <a href="home.html#paraArtistasSection">Para artistas</a>
+            <a href="/mg/goplus">Go+</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn-login" onclick="window.location.href='/'">Iniciar sesión</button>
+            <button class="btn-signup" onclick="window.location.href='/'">Unirse</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Explorar Container -->
+<div class="explorar-container">
+    
+    <!-- Card Slider - Mejor álbum del momento (efecto infinito) -->
+    <div class="featured-slider">
+        <div class="slider-header">
+            <h2>Mejor álbum del momento</h2>
+            <div class="slider-controls">
+                <button class="slider-prev"><i class='bx bx-chevron-left'></i></button>
+                <button class="slider-next"><i class='bx bx-chevron-right'></i></button>
+            </div>
+        </div>
+        <div class="slider-wrapper">
+            <div class="slider-track" id="featuredSlider"></div>
+        </div>
+        <div class="slider-dots"></div>
+    </div>
+
+    <!-- Artists to watch out for / BUZZING -->
+    <div class="section-row">
+        <div class="section-title-wrapper">
+            <h2 class="section-title-main">Artists to watch out for</h2>
+            <a href="#" class="view-all-link">Ver todos →</a>
+        </div>
+        <div class="items-grid grid-7">
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=10" alt="Artista">
+                    <div class="card-badge">BUZZING</div>
+                </div>
+                <div class="card-info">
+                    <h4>Steve Lacy</h4>
+                    <p>Gemini Rights</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=11" alt="Artista">
+                    <div class="card-badge">BUZZING</div>
+                </div>
+                <div class="card-info">
+                    <h4>DAMEDAME*</h4>
+                    <p>Reflections</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=12" alt="Artista">
+                    <div class="card-badge">BUZZING</div>
+                </div>
+                <div class="card-info">
+                    <h4>D.Ali</h4>
+                    <p>Lost Souls</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=13" alt="Artista">
+                    <div class="card-badge">BUZZING</div>
+                </div>
+                <div class="card-info">
+                    <h4>faye webster</h4>
+                    <p>Underdressed</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=14" alt="Artista">
+                    <div class="card-badge">BUZZING</div>
+                </div>
+                <div class="card-info">
+                    <h4>Malcolm</h4>
+                    <p>New Beginnings</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=15" alt="Artista">
+                    <div class="card-badge">BUZZING</div>
+                </div>
+                <div class="card-info">
+                    <h4>Omar Apollo</h4>
+                    <p>Ivory</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=16" alt="Artista">
+                    <div class="card-badge">BUZZING</div>
+                </div>
+                <div class="card-info">
+                    <h4>Raveena</h4>
+                    <p>Lucid</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buzzing by genre -->
+    <div class="section-row">
+        <div class="section-title-wrapper">
+            <h2 class="section-title-main">Buzzing by genre</h2>
+            <a href="#" class="view-all-link">Ver todos →</a>
+        </div>
+        <div class="items-grid grid-7">
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=20" alt="R&B">
+                </div>
+                <div class="card-info">
+                    <h4>Buzzing R&B</h4>
+                    <p>R&B</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=21" alt="HipHop">
+                </div>
+                <div class="card-info">
+                    <h4>Buzzing Hip Hop & Rap</h4>
+                    <p>HipHop & Rap</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=22" alt="Rock">
+                </div>
+                <div class="card-info">
+                    <h4>Buzzing Rock</h4>
+                    <p>Rock</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=23" alt="Mexico">
+                </div>
+                <div class="card-info">
+                    <h4>Buzzing Mexico</h4>
+                    <p>Mexico</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=24" alt="Electro">
+                </div>
+                <div class="card-info">
+                    <h4>Buzzing Electro</h4>
+                    <p>Electro</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=25" alt="Indie">
+                </div>
+                <div class="card-info">
+                    <h4>Buzzing Indie</h4>
+                    <p>Indie</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=26" alt="Pop">
+                </div>
+                <div class="card-info">
+                    <h4>Buzzing Pop</h4>
+                    <p>Pop</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Releases -->
+    <div class="section-row">
+        <div class="section-title-wrapper">
+            <h2 class="section-title-main">New Releases</h2>
+            <a href="#" class="view-all-link">Ver todos →</a>
+        </div>
+        <div class="items-grid grid-7">
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=30" alt="New Release">
+                    <div class="card-badge new">New!</div>
+                </div>
+                <div class="card-info">
+                    <h4>Midnight Dreams</h4>
+                    <p>The Weeknd</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=31" alt="New Release">
+                    <div class="card-badge new">New!</div>
+                </div>
+                <div class="card-info">
+                    <h4>Eternal Sunshine</h4>
+                    <p>Ariana Grande</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=32" alt="New Release">
+                    <div class="card-badge new">New!</div>
+                </div>
+                <div class="card-info">
+                    <h4>American Dream</h4>
+                    <p>21 Savage</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=33" alt="New Release">
+                    <div class="card-badge new">New!</div>
+                </div>
+                <div class="card-info">
+                    <h4>For All The Dogs</h4>
+                    <p>Drake</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=34" alt="New Release">
+                    <div class="card-badge new">New!</div>
+                </div>
+                <div class="card-info">
+                    <h4>Utopia</h4>
+                    <p>Travis Scott</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=35" alt="New Release">
+                    <div class="card-badge new">New!</div>
+                </div>
+                <div class="card-info">
+                    <h4>Guts</h4>
+                    <p>Olivia Rodrigo</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=36" alt="New Release">
+                    <div class="card-badge new">New!</div>
+                </div>
+                <div class="card-info">
+                    <h4>Rockstar</h4>
+                    <p>Duki</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trending by genre -->
+    <div class="section-row">
+        <div class="section-title-wrapper">
+            <h2 class="section-title-main">Trending by genre</h2>
+            <a href="#" class="view-all-link">Ver todos →</a>
+        </div>
+        <div class="items-grid grid-7">
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=40" alt="Soul">
+                </div>
+                <div class="card-info">
+                    <h4>EVENTNESSXNOTYPEMIX</h4>
+                    <p>Soul</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=41" alt="All genres">
+                </div>
+                <div class="card-info">
+                    <h4>All genres</h4>
+                    <p>Mix global</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=42" alt="R&B">
+                </div>
+                <div class="card-info">
+                    <h4>R&B</h4>
+                    <p>Lo mejor del R&B</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=43" alt="Indie">
+                </div>
+                <div class="card-info">
+                    <h4>Indie</h4>
+                    <p>Indie alternativo</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=44" alt="Folk">
+                </div>
+                <div class="card-info">
+                    <h4>Folk</h4>
+                    <p>Folk contemporáneo</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=45" alt="Rock">
+                </div>
+                <div class="card-info">
+                    <h4>Rock</h4>
+                    <p>Rock alternativo</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=46" alt="Pop">
+                </div>
+                <div class="card-info">
+                    <h4>Pop</h4>
+                    <p>Pop internacional</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trending Music -->
+    <div class="section-row">
+        <div class="section-title-wrapper">
+            <h2 class="section-title-main">Trending Music</h2>
+            <a href="#" class="view-all-link">Ver todos →</a>
+        </div>
+        <div class="items-grid grid-7">
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=50" alt="Trending">
+                </div>
+                <div class="card-info">
+                    <h4>Trending Music</h4>
+                    <p>Global hits</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=51" alt="Trending">
+                </div>
+                <div class="card-info">
+                    <h4>Trending Music</h4>
+                    <p>Top 50 global</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=52" alt="Trending">
+                </div>
+                <div class="card-info">
+                    <h4>Trending Music</h4>
+                    <p>Viral 50</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=53" alt="Trending">
+                </div>
+                <div class="card-info">
+                    <h4>Trending Music</h4>
+                    <p>Latino hits</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=54" alt="Trending">
+                </div>
+                <div class="card-info">
+                    <h4>Trending Music</h4>
+                    <p>Electronic</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=55" alt="Trending">
+                </div>
+                <div class="card-info">
+                    <h4>Trending Music</h4>
+                    <p>Indie hits</p>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/200?random=56" alt="Trending">
+                </div>
+                <div class="card-info">
+                    <h4>Trending Music</h4>
+                    <p>R&B Soul</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <div class="bottom-player">
+        <div class="bottom-player-content">
+            <!-- Info de la canción actual -->
+            <div class="player-song-info">
+                <div class="player-song-cover" id="playerCover">
+                    <i class='bx bx-music'></i>
+                </div>
+                <div class="player-song-details">
+                    <h4 id="bottomCurrentTitle">Selecciona una canción</h4>
+                    <p id="bottomCurrentArtist">-</p>
+                </div>
+                <i class='bx bx-heart' id="bottomFavoriteBtn" onclick="toggleFavorite()"></i>
+            </div>
+
+            <!-- Controles de reproducción -->
+            <div class="player-controls-center">
+                <div class="control-buttons">
+                    <button onclick="playPrevious()"><i class='bx bx-skip-previous'></i></button>
+                    <button class="play-btn" onclick="togglePlay()"><i class='bx bx-play-circle' id="playPauseIcon"></i></button>
+                    <button onclick="playNext()"><i class='bx bx-skip-next'></i></button>
+                </div>
+                <div class="progress-container">
+                    <span id="currentTime">0:00</span>
+                    <div class="progress-bar" onclick="seek(event)">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            <!-- Controles de volumen y cola -->
+            <div class="player-controls-right">
+                <i class='bx bx-list-ul' onclick="toggleQueue()"></i>
+                <div class="volume-container">
+                    <i class='bx bx-volume-low' id="volumeIcon" onclick="toggleMute()"></i>
+                    <div class="volume-bar" onclick="setVolume(event)">
+                        <div class="volume-fill" id="volumeFill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cola de reproducción -->
+        <div class="queue-panel" id="queuePanel">
+            <div class="queue-header">
+                <h5>COLA DE REPRODUCCIÓN</h5>
+                <i class='bx bx-x' onclick="toggleQueue()"></i>
+            </div>
+            <div id="queueList" class="queue-list"></div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+ <footer class="footer reveal">
+            <div class="footer-content">
+                <div class="footer-logo">
+                      <span class="material-icons-round">graphic_eq</span>
+                    <span>MusicGround</span>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Producto</h4>
+                        <a href="/mg/caracteristicas">Características</a>
+                        <a href="/mg/goplus">Go+</a>
+                        <a href="/mg/artistpro">Para artistas</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Comunidad</h4>
+                        <a href="/mg/artistas">Artistas destacados</a>
+                        <a href="/mg/playlists">Playlists</a>
+                        <a href="/mg/eventos">Eventos</a>
+                        <a href="/mg/blog">Blog</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Soporte</h4>
+                        <a href="/mg/ayuda">Ayuda</a>
+                        <a href="/mg/seguridad">Centro de seguridad</a>
+                        <a href="/mg/terminos">Términos</a>
+                        <a href="/mg/seguridad">Privacidad</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Síguenos</h4>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/realmusicground/"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://x.com/MusicGroundMx"><i class='bx bxl-twitter'></i></a>
+                            <a href="https://youtube.com/@musicground-c2l?si=zg02KjWzjbkq0rc0"><i class='bx bxl-youtube'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MusicGround. Donde vive toda escena musical.</p>
+            </div>
+        </footer>
+
+<script>
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const revealPoint = 100;
+                if (elementTop < windowHeight - revealPoint) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+    // ========== SLIDER INFINITO ==========
+    (function() {
+        const albums = [
+            { title: "DAMEDAME*", subtitle: "Artista del año", img: "https://picsum.photos/300/300?random=1" },
+            { title: "JAMZ", subtitle: "Álbum del mes", img: "https://picsum.photos/300/300?random=2" },
+            { title: "GIANTS", subtitle: "Recomendado", img: "https://picsum.photos/300/300?random=3" },
+            { title: "DREAMS", subtitle: "Escucha ahora", img: "https://picsum.photos/300/300?random=4" },
+            { title: "UKBlackHistory", subtitle: "Colección especial", img: "https://picsum.photos/300/300?random=5" },
+            { title: "Best UK R&B", subtitle: "Lo mejor del género", img: "https://picsum.photos/300/300?random=6" }
+        ];
+
+        const track = document.getElementById('featuredSlider');
+        const prevBtn = document.querySelector('.slider-prev');
+        const nextBtn = document.querySelector('.slider-next');
+        const dotsContainer = document.querySelector('.slider-dots');
+
+        let currentIndex = 0;
+        let itemWidth = 320;
+        let visibleItems = 4;
+        let totalItems = albums.length;
+        let autoPlayInterval = null;
+        let isTransitioning = false;
+
+        function updateDimensions() {
+            if (window.innerWidth <= 768) {
+                visibleItems = 2;
+                itemWidth = 330;
+            } else if (window.innerWidth <= 1000) {
+                visibleItems = 3;
+                itemWidth = 325;
+            } else {
+                visibleItems = 4;
+                itemWidth = 320;
+            }
+        }
+
+        function buildSlider() {
+            track.innerHTML = '';
+            
+            const lastItems = albums.slice(-visibleItems);
+            const firstItems = albums.slice(0, visibleItems);
+            const finalItems = [...lastItems, ...albums, ...firstItems];
+            
+            finalItems.forEach((album, idx) => {
+                const card = document.createElement('div');
+                card.className = 'slider-card';
+                card.innerHTML = `
+                    <div class="slider-image">
+                        <img src="${album.img}" alt="${album.title}">
+                    </div>
+                    <div class="slider-info">
+                        <h3>${album.title}</h3>
+                        <p>${album.subtitle}</p>
+                    </div>
+                `;
+                card.addEventListener('click', () => {
+                    console.log(`Reproduciendo: ${album.title}`);
+                });
+                track.appendChild(card);
+            });
+        }
+
+        function updateSlider(animate = true) {
+            if (!animate) {
+                track.style.transition = 'none';
+            } else {
+                track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            }
+            
+            const offset = -(currentIndex * itemWidth);
+            track.style.transform = `translateX(${offset}px)`;
+            
+            if (!animate) {
+                track.offsetHeight;
+                track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            }
+        }
+
+        function handleTransitionEnd() {
+            if (isTransitioning) {
+                isTransitioning = false;
+                return;
+            }
+            
+            if (currentIndex >= totalItems) {
+                track.style.transition = 'none';
+                currentIndex = currentIndex - totalItems;
+                updateSlider(false);
+            } else if (currentIndex < 0) {
+                track.style.transition = 'none';
+                currentIndex = currentIndex + totalItems;
+                updateSlider(false);
+            }
+        }
+
+        function nextSlide() {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            currentIndex++;
+            updateSlider(true);
+            updateDots();
+            resetAutoPlay();
+        }
+
+        function prevSlide() {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            currentIndex--;
+            updateSlider(true);
+            updateDots();
+            resetAutoPlay();
+        }
+
+        function updateDots() {
+            if (!dotsContainer) return;
+            let realIndex = ((currentIndex % totalItems) + totalItems) % totalItems;
+            const dots = dotsContainer.querySelectorAll('.slider-dot');
+            dots.forEach((dot, idx) => {
+                if (idx === realIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function createDots() {
+            if (!dotsContainer) return;
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalItems; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'slider-dot';
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    const targetIndex = i;
+                    const diff = targetIndex - ((currentIndex % totalItems) + totalItems) % totalItems;
+                    currentIndex += diff;
+                    updateSlider(true);
+                    updateDots();
+                    resetAutoPlay();
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function startAutoPlay() {
+            if (autoPlayInterval) clearInterval(autoPlayInterval);
+            autoPlayInterval = setInterval(() => {
+                nextSlide();
+            }, 5000);
+        }
+
+        function resetAutoPlay() {
+            if (autoPlayInterval) {
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            }
+        }
+
+        function stopAutoPlay() {
+            if (autoPlayInterval) {
+                clearInterval(autoPlayInterval);
+                autoPlayInterval = null;
+            }
+        }
+
+        function initSlider() {
+            updateDimensions();
+            buildSlider();
+            createDots();
+            currentIndex = visibleItems;
+            updateSlider(false);
+            
+            track.addEventListener('transitionend', handleTransitionEnd);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            
+            const sliderWrapper = document.querySelector('.slider-wrapper');
+            if (sliderWrapper) {
+                sliderWrapper.addEventListener('mouseenter', stopAutoPlay);
+                sliderWrapper.addEventListener('mouseleave', startAutoPlay);
+            }
+            
+            startAutoPlay();
+            
+            window.addEventListener('resize', () => {
+                updateDimensions();
+                const oldIndex = currentIndex;
+                buildSlider();
+                currentIndex = oldIndex;
+                updateSlider(false);
+                updateDots();
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initSlider);
+        } else {
+            initSlider();
+        }
+    })();
+</script>
+
+</body>
+</html>

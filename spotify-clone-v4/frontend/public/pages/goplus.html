@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="goplus.css">
+    
+    <title>MusicGround</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-content">
+        <a href="/" class="logo">
+           <span class="material-icons-round">graphic_eq</span>
+            <span>MusicGround</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/mg/explorar">Explorar</a>
+            <a href="/mg/artistpro">Para artistas</a>
+            <a href="/mg/goplus" class="active">Go+</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn-login" onclick="window.location.href='/'">Iniciar sesión</button>
+            <button class="btn-signup" onclick="window.location.href='/'">Unirse</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="header-bg-grid"></div>
+    <div class="header-content">
+        <div class="breadcrumb">
+            <a href="/">Inicio</a>
+            <span class="material-icons-round">chevron_right</span>
+            <span class="active">Go+</span>
+        </div>
+        <h1>MusicGround <span class="highlight">Go+</span></h1>
+        <div class="header-meta">
+            <span class="material-icons-round">headphones</span>
+            <span>Música sin anuncios, donde quieras</span>
+        </div>
+    </div>
+</div>
+
+<!-- Layout Container con Sidebar -->
+<div class="layout-container">
+    <!-- Sidebar izquierdo -->
+    <aside class="sidebar">
+        <div class="sidebar-sticky">
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Intro Card -->
+        <div class="intro-card reveal">
+            <span class="material-icons-round">stars</span>
+            <p>Con MusicGround Go+ disfruta de música sin interrupciones, con la mejor calidad de audio y la libertad de escuchar donde quieras. Elige el plan que mejor se adapte a ti.</p>
+        </div>
+
+        <!-- Plans Grid -->
+        <div class="plans-grid reveal">
+            <!-- Plan Individual -->
+            <div id="individual" class="plan-card popular">
+                <div class="plan-badge">MÁS POPULAR</div>
+                <div class="plan-icon">
+                    <span class="material-icons-round">person</span>
+                </div>
+                <h3>Individual</h3>
+                <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount">99</span>
+                    <span class="period">/mes</span>
+                </div>
+                <p class="plan-description">Perfecto para ti. Disfruta de toda la música sin límites.</p>
+                <ul class="plan-features">
+                    <li><span class="material-icons-round">check_circle</span> Sin anuncios</li>
+                    <li><span class="material-icons-round">check_circle</span> Escucha offline</li>
+                    <li><span class="material-icons-round">check_circle</span> Audio de alta calidad</li>
+                    <li><span class="material-icons-round">check_circle</span> 1 cuenta</li>
+                </ul>
+                <button class="plan-btn">Comenzar prueba gratis</button>
+                <p class="plan-note">Prueba gratuita de 1 mes</p>
+            </div>
+
+            <!-- Plan Duo -->
+            <div id="duo" class="plan-card">
+                <div class="plan-icon">
+                    <span class="material-icons-round">group</span>
+                </div>
+                <h3>Duo</h3>
+                <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount">149</span>
+                    <span class="period">/mes</span>
+                </div>
+                <p class="plan-description">Para ti y tu compañero. Dos cuentas separadas.</p>
+                <ul class="plan-features">
+                    <li><span class="material-icons-round">check_circle</span> Sin anuncios</li>
+                    <li><span class="material-icons-round">check_circle</span> Escucha offline</li>
+                    <li><span class="material-icons-round">check_circle</span> Audio de alta calidad</li>
+                    <li><span class="material-icons-round">check_circle</span> 2 cuentas separadas</li>
+                </ul>
+                <button class="plan-btn">Comenzar prueba gratis</button>
+                <p class="plan-note">Prueba gratuita de 1 mes</p>
+            </div>
+
+            <!-- Plan Familiar -->
+            <div id="familiar" class="plan-card">
+                <div class="plan-icon">
+                    <span class="material-icons-round">family_restroom</span>
+                </div>
+                <h3>Familiar</h3>
+                <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount">199</span>
+                    <span class="period">/mes</span>
+                </div>
+                <p class="plan-description">Para toda la familia. Hasta 6 cuentas separadas.</p>
+                <ul class="plan-features">
+                    <li><span class="material-icons-round">check_circle</span> Sin anuncios</li>
+                    <li><span class="material-icons-round">check_circle</span> Escucha offline</li>
+                    <li><span class="material-icons-round">check_circle</span> Audio de alta calidad</li>
+                    <li><span class="material-icons-round">check_circle</span> Hasta 6 cuentas</li>
+                    <li><span class="material-icons-round">check_circle</span> Control parental</li>
+                </ul>
+                <button class="plan-btn">Comenzar prueba gratis</button>
+                <p class="plan-note">Prueba gratuita de 1 mes</p>
+            </div>
+
+            <!-- Plan Estudiante -->
+            <div id="estudiante" class="plan-card">
+                <div class="plan-icon">
+                    <span class="material-icons-round">school</span>
+                </div>
+                <h3>Estudiante</h3>
+                <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount">49</span>
+                    <span class="period">/mes</span>
+                </div>
+                <p class="plan-description">Descuento especial para estudiantes verificados.</p>
+                <ul class="plan-features">
+                    <li><span class="material-icons-round">check_circle</span> Sin anuncios</li>
+                    <li><span class="material-icons-round">check_circle</span> Escucha offline</li>
+                    <li><span class="material-icons-round">check_circle</span> Audio de alta calidad</li>
+                    <li><span class="material-icons-round">check_circle</span> 1 cuenta</li>
+                    <li><span class="material-icons-round">check_circle</span> Requiere verificación</li>
+                </ul>
+                <button class="plan-btn">Verificar elegibilidad</button>
+                <p class="plan-note">50% de descuento</p>
+            </div>
+        </div>
+
+        <!-- Tabla comparativa -->
+        <div id="comparativa-tabla" class="terms-section reveal">
+            <div class="section-tag">Comparativa</div>
+            <h2> Compara todos los planes</h2>
+            
+            <div class="comparativa-table">
+                <div class="table-header">
+                    <div>Características</div>
+                    <div>Individual</div>
+                    <div>Duo</div>
+                    <div>Familiar</div>
+                    <div>Estudiante</div>
+                </div>
+                <div class="table-row">
+                    <div>Precio mensual</div>
+                    <div>$99</div>
+                    <div>$149</div>
+                    <div>$199</div>
+                    <div>$49</div>
+                </div>
+                <div class="table-row">
+                    <div>Sin anuncios</div>
+                    <div><span class="material-icons-round">check</span></div>
+                    <div><span class="material-icons-round">check</span></div>
+                    <div><span class="material-icons-round">check</span></div>
+                    <div><span class="material-icons-round">check</span></div>
+                </div>
+                <div class="table-row">
+                    <div>Escucha offline</div>
+                    <div><span class="material-icons-round">check</span></div>
+                    <div><span class="material-icons-round">check</span></div>
+                    <div><span class="material-icons-round">check</span></div>
+                    <div><span class="material-icons-round">check</span></div>
+                </div>
+                <div class="table-row">
+                    <div>Audio de alta calidad</div>
+                    <div><span class="material-icons-round">check</span></div>
+                    <div><span class="material-icons-round">check</span></div>
+                    <div><span class="material-icons-round">check</span></div>
+                    <div><span class="material-icons-round">check</span></div>
+                </div>
+                <div class="table-row">
+                    <div>Número de cuentas</div>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>6</div>
+                    <div>1</div>
+                </div>
+                <div class="table-row">
+                    <div>Control parental</div>
+                    <div>—</div>
+                    <div>—</div>
+                    <div><span class="material-icons-round">check</span></div>
+                    <div>—</div>
+                </div>
+                <div class="table-row">
+                    <div>Prueba gratuita</div>
+                    <div>1 mes</div>
+                    <div>1 mes</div>
+                    <div>1 mes</div>
+                    <div>1 mes</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de beneficios -->
+        <div id="sin-anuncios" class="terms-section reveal">
+            <div class="section-tag">Beneficios</div>
+            <h2> Sin anuncios</h2>
+            <p>Disfruta de tu música favorita sin interrupciones. Con MusicGround Go+, los anuncios desaparecen por completo, permitiéndote sumergirte en la experiencia musical sin distracciones.</p>
+        </div>
+
+        <div id="offline" class="terms-section reveal">
+            <h2>Modo offline</h2>
+            <p>Descarga tus canciones, playlists y álbumes favoritos para escucharlos sin conexión. Perfecto para viajes, entrenamiento o cualquier momento sin internet.</p>
+            <div class="highlight-box">
+                <span class="material-icons-round">download_done</span>
+                <p><strong>Hasta 10,000 canciones</strong> por dispositivo para descarga offline.</p>
+            </div>
+        </div>
+
+        <div id="alta-calidad" class="terms-section reveal">
+            <h2> Audio de alta calidad</h2>
+            <p>Escucha tu música en formato de alta definición. Disfruta de cada detalle con audio de hasta 320 kbps y próximamente audio sin pérdida (Hi-Res).</p>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="material-icons-round">graphic_eq</span>
+                    <strong>Calidad estándar</strong>
+                    <p>160 kbps - Perfecto para datos móviles</p>
+                </div>
+                <div class="feature-item">
+                    <span class="material-icons-round">equalizer</span>
+                    <strong>Calidad alta</strong>
+                    <p>320 kbps - Máxima calidad en streaming</p>
+                </div>
+                <div class="feature-item neutral">
+                    <span class="material-icons-round">studio_mic</span>
+                    <strong>Hi-Res (Próximamente)</strong>
+                    <p>Audio sin pérdida - 24-bit/192kHz</p>
+                </div>
+                <div class="feature-item neutral">
+                    <span class="material-icons-round">surround_sound</span>
+                    <strong>Audio espacial</strong>
+                    <p>Soporte para Dolby Atmos y 360 Reality Audio</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preguntas frecuentes -->
+        <div id="preguntas" class="terms-section reveal">
+            <div class="section-tag">FAQ</div>
+            <h2>Preguntas frecuentes</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Puedo cancelar mi suscripción en cualquier momento?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Sí, puedes cancelar tu suscripción Go+ en cualquier momento desde la configuración de tu cuenta. No hay cargos por cancelación y seguirás disfrutando del servicio hasta el final del período facturado.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿La prueba gratuita requiere tarjeta de crédito?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Para la prueba gratuita de 1 mes sí requerimos un método de pago válido. No te cobraremos hasta que termine el período de prueba, y te notificaremos antes de que finalice.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Puedo compartir mi cuenta Go+ con mi familia?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        El plan Familiar está diseñado específicamente para compartir con hasta 6 miembros de tu familia. Cada miembro tiene su propia cuenta separada con sus propias playlists y recomendaciones.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Qué métodos de pago aceptan?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Aceptamos tarjetas de crédito/débito (Visa, Mastercard, American Express), PayPal, y pagos a través de tiendas de aplicaciones (App Store, Google Play).
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Puedo cambiar de plan después de suscribirme?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Sí, puedes cambiar de plan en cualquier momento. Los cambios se aplicarán en tu próximo ciclo de facturación. Si cambias a un plan superior, la diferencia se prorrateará.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA final -->
+        <div class="cta-card reveal">
+            <div class="cta-card-content">
+                <span class="material-icons-round">rocket_launch</span>
+                <h3>¿Listo para la mejor experiencia musical?</h3>
+                <p>Únete a MusicGround Go+ y disfruta de música sin límites</p>
+                <button class="cta-card-btn">Comenzar prueba gratuita</button>
+            </div>
+        </div>
+
+        <!-- Last updated -->
+        <div class="last-updated">
+            <span class="material-icons-round">update</span>
+            <span>Última actualización: 20 de mayo, 2026</span>
+        </div>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <span class="material-icons-round">graphic_eq</span>
+                <span>MusicGround</span>
+            </div>
+            <p>Donde vive toda escena musical. Conectamos artistas y oyentes en una plataforma segura y vibrante.</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <a href="/mg/terminos">Términos de Uso</a>
+                <a href="/mg/privacidad">Política de Privacidad</a>
+                <a href="#">Política de Cookies</a>
+            </div>
+            <div class="footer-column">
+                <h4>Seguridad</h4>
+                <a href="/mg/seguridad">Centro de Seguridad</a>
+                <a href="#">Reportar problema</a>
+                <a href="#">Directrices de la Comunidad</a>
+            </div>
+            <div class="footer-column">
+                <h4>Soporte</h4>
+                <a href="#">Centro de Ayuda</a>
+                <a href="#">Contacto</a>
+                <a href="/mg/goplus">Go+</a>
+            </div>
+            <div class="footer-column">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/realmusicground/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://x.com/MusicGroundMx"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.youtube.com/@musicground-c2l"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 MusicGround. Donde vive toda escena musical.</p>
+    </div>
+</footer>
+
+<script>
+    // Reveal animations on scroll
+    const revealElements = document.querySelectorAll('.reveal, .plans-grid, .cta-card');
+    
+    function checkReveal() {
+        const windowHeight = window.innerHeight;
+        const revealThreshold = 100;
+        
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight - revealThreshold) {
+                element.classList.add('revealed');
+            }
+        });
+    }
+    
+    // Active section highlighting on scroll
+    const sections = document.querySelectorAll('.plan-card, .terms-section');
+    const navLinks = document.querySelectorAll('.sidebar-nav a, .toc-nav a');
+    
+    function updateActiveSection() {
+        let current = '';
+        const scrollPosition = window.scrollY + 120;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (href && href.substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === "#" || targetId === "") return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.pushState(null, null, targetId);
+            }
+        });
+    });
+    
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            faqItem.classList.toggle('open');
+        });
+    });
+    
+    // Initialize
+    window.addEventListener('scroll', () => {
+        checkReveal();
+        updateActiveSection();
+    });
+    window.addEventListener('load', () => {
+        checkReveal();
+        updateActiveSection();
+    });
+</script>
+
+</body>
+</html>

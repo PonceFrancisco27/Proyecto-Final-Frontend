@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicGround - Reportar un Problema</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--bg:#060610;--panel:#0a0a1a;--card:rgba(255,255,255,0.04);--accent:#00ff4c;--text:#e8e8f0;--muted:rgba(255,255,255,0.55);--faint:rgba(255,255,255,0.25);--border:rgba(255,255,255,0.08);--font-d:'Syne',sans-serif;--font-b:'DM Sans',sans-serif}
+        body{background:var(--bg);color:var(--text);font-family:var(--font-b);font-size:15px;line-height:1.75;overflow-x:hidden}
+        .navbar{position:fixed;top:0;width:100%;background:rgba(6,6,16,0.92);backdrop-filter:blur(16px);z-index:1000;padding:1rem 2rem;border-bottom:1px solid var(--border)}
+        .nav-content{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+        .logo{display:flex;align-items:center;gap:8px;font-family:var(--font-d);font-size:22px;font-weight:800;text-decoration:none;color:var(--text)}
+        .logo .material-icons-round{color:var(--accent);font-size:26px}
+        .logo span:last-child{background:linear-gradient(135deg,#fff,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .nav-links{display:flex;gap:2rem}
+        .nav-links a{color:var(--muted);text-decoration:none;font-size:14px;transition:color .2s}
+        .nav-links a:hover{color:var(--accent)}
+        .nav-buttons{display:flex;gap:1rem;align-items:center}
+        .btn-login{background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--text);padding:.5rem 1.2rem;border-radius:50px;font-size:14px;cursor:pointer;transition:all .2s}
+        .btn-login:hover{border-color:var(--accent);color:var(--accent)}
+        .btn-join{background:linear-gradient(135deg,#00ff4c,#00cc3d);color:#060610;border:none;padding:.5rem 1.2rem;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s}
+        .btn-join:hover{transform:scale(1.05);box-shadow:0 0 18px rgba(0,255,76,.4)}
+        main{padding-top:90px;max-width:900px;margin:0 auto;padding-left:2rem;padding-right:2rem;padding-bottom:4rem}
+        .page-hero{text-align:center;padding:4rem 0 3rem}
+        .page-hero h1{font-family:var(--font-d);font-size:2.8rem;font-weight:800;margin-bottom:1rem;background:linear-gradient(135deg,#fff,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .page-hero p{color:var(--muted);font-size:1.1rem;max-width:600px;margin:0 auto}
+        .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;margin-bottom:1.5rem;transition:border-color .2s}
+        .card:hover{border-color:rgba(0,255,76,0.2)}
+        .card h2{font-family:var(--font-d);font-size:1.3rem;margin-bottom:1rem;color:var(--accent)}
+        .card h3{font-family:var(--font-d);font-size:1.1rem;margin-bottom:.75rem;color:var(--text)}
+        .card p{color:var(--muted);margin-bottom:.75rem}
+        .card ul{color:var(--muted);padding-left:1.5rem}
+        .card ul li{margin-bottom:.5rem}
+        .tag{display:inline-flex;align-items:center;gap:.4rem;background:rgba(0,255,76,.1);color:var(--accent);border:1px solid rgba(0,255,76,.25);padding:.3rem .9rem;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:2rem}
+        .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+        @media(max-width:768px){.grid-2{grid-template-columns:1fr}.nav-links{display:none}.page-hero h1{font-size:2rem}}
+        footer{background:var(--panel);border-top:1px solid var(--border);padding:3rem 2rem 2rem;margin-top:4rem}
+        .footer-content{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;margin-bottom:2rem}
+        .footer-logo{display:flex;align-items:center;gap:8px;font-family:var(--font-d);font-size:20px;font-weight:800;margin-bottom:.5rem}
+        .footer-logo .material-icons-round{color:var(--accent)}
+        .footer-logo span:last-child{background:linear-gradient(135deg,#fff,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .footer-brand p{color:var(--faint);font-size:13px;max-width:220px}
+        .footer-col h4{font-family:var(--font-d);font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:1rem}
+        .footer-col a{display:block;color:var(--faint);text-decoration:none;font-size:13px;margin-bottom:.5rem;transition:color .2s}
+        .footer-col a:hover{color:var(--accent)}
+        .social{display:flex;gap:.5rem;margin-top:.5rem}
+        .social a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.04);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:16px;transition:all .2s}
+        .social a:hover{background:rgba(0,255,76,.1);border-color:rgba(0,255,76,.3);color:var(--accent)}
+        .footer-bottom{max-width:1200px;margin:0 auto;padding-top:1.5rem;border-top:1px solid var(--border);text-align:center;color:var(--faint);font-size:13px}
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-content">
+        <a href="/" class="logo"><span class="material-icons-round">graphic_eq</span><span>MusicGround</span></a>
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/mg/explorar">Explorar</a>
+            <a href="/mg/artistpro">Para artistas</a>
+            <a href="/mg/goplus">Go+</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn-login" onclick="location.href='/'">Iniciar sesión</button>
+            <button class="btn-join" onclick="location.href='/'">Unirse</button>
+        </div>
+    </div>
+</nav>
+
+<main>
+  <div class="page-hero">
+    <div class="tag"><i class='bx bx-flag'></i> Soporte</div>
+    <h1>Reportar un Problema</h1>
+    <p>¿Encontraste contenido inapropiado, un error técnico o un problema de seguridad? Ayúdanos a mejorar MusicGround.</p>
+  </div>
+  <div class="grid-2">
+    <div class="card" style="cursor:pointer" onmouseenter="this.style.borderColor='rgba(0,255,76,0.4)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.08)'">
+      <h2><i class='bx bx-shield-x' style="margin-right:8px"></i>Contenido inapropiado</h2>
+      <p>Reporta música, perfiles o comentarios que violen nuestras directrices de comunidad.</p>
+    </div>
+    <div class="card" style="cursor:pointer" onmouseenter="this.style.borderColor='rgba(0,255,76,0.4)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.08)'">
+      <h2><i class='bx bx-bug' style="margin-right:8px"></i>Error técnico</h2>
+      <p>Reporta bugs, problemas de reproducción, fallos en la app o comportamientos inesperados.</p>
+    </div>
+    <div class="card" style="cursor:pointer" onmouseenter="this.style.borderColor='rgba(0,255,76,0.4)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.08)'">
+      <h2><i class='bx bx-lock-alt' style="margin-right:8px"></i>Problema de seguridad</h2>
+      <p>Si encontraste una vulnerabilidad de seguridad, repórtala de forma responsable.</p>
+    </div>
+    <div class="card" style="cursor:pointer" onmouseenter="this.style.borderColor='rgba(0,255,76,0.4)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.08)'">
+      <h2><i class='bx bx-copyright' style="margin-right:8px"></i>Infracción de copyright</h2>
+      <p>Reporta contenido que infrinja derechos de autor o propiedad intelectual.</p>
+    </div>
+  </div>
+  <div class="card" style="text-align:center;padding:3rem">
+    <h2>Enviar reporte</h2>
+    <p style="margin-bottom:1.5rem">Para reportes detallados contáctanos directamente</p>
+    <a href="/mg/centrocontacto" style="display:inline-block;background:linear-gradient(135deg,#00ff4c,#00cc3d);color:#060610;padding:.75rem 2rem;border-radius:50px;font-weight:700;text-decoration:none">Ir al centro de contacto</a>
+  </div>
+</main>
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="footer-logo"><span class="material-icons-round">graphic_eq</span><span>MusicGround</span></div>
+            <p>La plataforma de música para artistas y oyentes de todo el mundo.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Producto</h4>
+            <a href="/mg/caracteristicas">Características</a>
+            <a href="/mg/goplus">Go+</a>
+            <a href="/mg/artistpro">Para artistas</a>
+        </div>
+        <div class="footer-col">
+            <h4>Comunidad</h4>
+            <a href="/mg/artistas">Artistas destacados</a>
+            <a href="/mg/playlists">Playlists</a>
+            <a href="/mg/eventos">Eventos</a>
+            <a href="/mg/blog">Blog</a>
+        </div>
+        <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="/mg/terminos">Términos</a>
+            <a href="/mg/privacidad">Privacidad</a>
+            <a href="/mg/cookies">Cookies</a>
+            <a href="/mg/copyright">Copyright</a>
+        </div>
+        <div class="footer-col">
+            <h4>Empresa</h4>
+            <a href="/mg/empleo">Empleo</a>
+            <a href="/mg/prensa">Prensa</a>
+            <a href="/mg/ayuda">Ayuda</a>
+            <a href="/mg/centrocontacto">Contacto</a>
+        </div>
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="social">
+                <a href="https://www.instagram.com/realmusicground/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://x.com/MusicGroundMx"><i class='bx bxl-twitter'></i></a>
+                <a href="https://youtube.com/@musicground-c2l"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 MusicGround. Todos los derechos reservados.</p></div>
+</footer>
+</body></html>

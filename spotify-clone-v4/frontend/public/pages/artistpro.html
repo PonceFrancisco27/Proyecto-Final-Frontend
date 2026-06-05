@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="artistprostyle.css">
+    
+    <title>MusicGround - Planes para Artistas</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-content">
+        <a href="/" class="logo">
+            <i class='bx bx-ghost'></i>
+            <span>MusicGround</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/mg/explorar">Explorar</a>
+            <a href="/mg/artistpro" class="active">Para artistas</a>
+            <a href="/mg/goplus">Go+</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn-login" onclick="window.location.href='/'">Iniciar sesión</button>
+            <button class="btn-signup" onclick="window.location.href='/'">Unirse</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="header-bg-grid"></div>
+    <div class="header-content">
+        <div class="breadcrumb">
+            <a href="/">Inicio</a>
+            <span class="material-icons-round">chevron_right</span>
+            <span class="active">Para artistas</span>
+        </div>
+        <h1>Planes <span class="highlight">disponibles</span></h1>
+        <div class="header-meta">
+            <span class="material-icons-round">mic</span>
+            <span>Elige el plan que mejor se adapte a tu carrera musical</span>
+        </div>
+    </div>
+</div>
+
+<!-- Planes Section -->
+<section class="plans-section">
+    <div class="plans-container">
+        <!-- Plan Artist -->
+        <div class="plan-card">
+            <div class="plan-header">
+                <h2>Artist</h2>
+                <p class="plan-subtitle">Acceso personalizado a herramientas esenciales para el artista</p>
+            </div>
+            <div class="plan-price">
+                <span class="price">$50</span>
+                <span class="period">/ mes</span>
+                <p class="billing">facturación anual por $600 MXN</p>
+            </div>
+            <button class="btn-plan" onclick="window.location.href='/'">Comenzar</button>
+            <ul class="plan-features">
+                <li><i class='bx bx-check-circle'></i><span>3 horas de subidas</span></li>
+                <li><i class='bx bx-check-circle'></i><span>Promueve las pistas y consigue más de 100 oyentes</span></li>
+                <li><i class='bx bx-check-circle'></i><span>Distribuye y monetiza pistas</span></li>
+                <li><i class='bx bx-check-circle'></i><span>Sustituye pistas sin perder estadísticas</span></li>
+            </ul>
+        </div>
+
+        <!-- Plan Artist Pro -->
+        <div class="plan-card featured">
+            <div class="popular-badge">MÁS POPULAR</div>
+            <div class="plan-header">
+                <h2>Artist Pro</h2>
+                <p class="plan-subtitle">Acceso ilimitado a todas las herramientas de artista</p>
+            </div>
+            <div class="plan-price">
+                <span class="price">$125</span>
+                <span class="period">/ mes</span>
+                <p class="billing">facturación anual por $1500 MXN</p>
+            </div>
+            <button class="btn-plan btn-pro" onclick="window.location.href='/'">Comenzar</button>
+            <ul class="plan-features">
+                <li><i class='bx bx-check-circle'></i><span>Subidas ilimitadas</span></li>
+                <li><i class='bx bx-check-circle'></i><span>Promueve las pistas y consigue más de 100 oyentes</span></li>
+                <li><i class='bx bx-check-circle'></i><span>Distribuye y monetiza pistas</span></li>
+                <li><i class='bx bx-check-circle'></i><span>Sustituye pistas sin perder estadísticas</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison Section -->
+<section class="comparison-section">
+    <div class="comparison-container">
+        <h2>Compara características</h2>
+        <div class="comparison-table">
+            <div class="table-header">
+                <div class="col-feature">Características</div>
+                <div class="col-artist">Artist</div>
+                <div class="col-pro">Artist Pro</div>
+            </div>
+            <div class="table-row">
+                <div class="col-feature">Subidas</div>
+                <div class="col-artist">3 horas</div>
+                <div class="col-pro">Ilimitadas</div>
+            </div>
+            <div class="table-row">
+                <div class="col-feature">Promoción a 100+ oyentes</div>
+                <div class="col-artist"><i class='bx bx-check'></i></div>
+                <div class="col-pro"><i class='bx bx-check'></i></div>
+            </div>
+            <div class="table-row">
+                <div class="col-feature">Distribución y monetización</div>
+                <div class="col-artist"><i class='bx bx-check'></i></div>
+                <div class="col-pro"><i class='bx bx-check'></i></div>
+            </div>
+            <div class="table-row">
+                <div class="col-feature">Sustituir pistas sin perder stats</div>
+                <div class="col-artist"><i class='bx bx-check'></i></div>
+                <div class="col-pro"><i class='bx bx-check'></i></div>
+            </div>
+            <div class="table-row">
+                <div class="col-feature">Soporte prioritario</div>
+                <div class="col-artist"><i class='bx bx-x'></i></div>
+                <div class="col-pro"><i class='bx bx-check'></i></div>
+            </div>
+            <div class="table-row">
+                <div class="col-feature">Analíticas avanzadas</div>
+                <div class="col-artist"><i class='bx bx-x'></i></div>
+                <div class="col-pro"><i class='bx bx-check'></i></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="faq-container">
+        <h2>Preguntas frecuentes</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>¿Puedo cambiar de plan después?</h3>
+                <p>Sí, puedes actualizar o cancelar tu plan en cualquier momento desde la configuración de tu cuenta.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Cómo recibo mis regalías?</h3>
+                <p>Las regalías se depositan mensualmente directamente en tu cuenta bancaria o PayPal.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Necesito un sello discográfico?</h3>
+                <p>No, MusicGround te permite distribuir tu música independientemente sin necesidad de un sello.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Qué plataformas de distribución incluye?</h3>
+                <p>Spotify, Apple Music, Amazon Music, TikTok, Instagram y más de 30 plataformas globales.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Final -->
+<section class="cta-final">
+    <div class="cta-content">
+        <h2>¿Listo para llevar tu música al siguiente nivel?</h2>
+        <p>Únete a miles de artistas que ya confían en MusicGround</p>
+        <button class="btn-primary" onclick="window.location.href='/'">Comenzar ahora</button>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <i class='bx bx-ghost'></i>
+                <span>MusicGround</span>
+            </div>
+            <p>Donde vive toda escena musical. Conectamos artistas y oyentes en una plataforma segura y vibrante.</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Producto</h4>
+                <a href="/mg/caracteristicas">Características</a>
+                <a href="/mg/goplus">Go+</a>
+                <a href="/mg/artistpro">Para artistas</a>
+            </div>
+            <div class="footer-column">
+                <h4>Comunidad</h4>
+                <a href="/mg/artistas">Artistas destacados</a>
+                <a href="#">Playlists</a>
+                <a href="/mg/eventos">Eventos</a>
+                <a href="/mg/blog">Blog</a>
+            </div>
+            <div class="footer-column">
+                <h4>Soporte</h4>
+                <a href="#">Ayuda</a>
+                <a href="security.html">Centro de seguridad</a>
+                <a href="terms.html">Términos</a>
+                <a href="#">Privacidad</a>
+            </div>
+            <div class="footer-column">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/realmusicground/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://x.com/MusicGroundMx"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://youtube.com/@musicground-c2l"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 MusicGround. Donde vive toda escena musical.</p>
+    </div>
+</footer>
+
+<script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === "#" || targetId === "") return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+    
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.plan-card, .faq-item');
+    
+    function checkReveal() {
+        const windowHeight = window.innerHeight;
+        const revealThreshold = 100;
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight - revealThreshold) {
+                element.classList.add('revealed');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', checkReveal);
+    window.addEventListener('load', checkReveal);
+</script>
+
+</body>
+</html>

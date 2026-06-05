@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="playerdas.css">
+    
+    <title>MusicGround - Mi Dashboard</title>
+</head>
+<body>
+
+<div id="dashboard-view">
+    <!-- NAVBAR SUPERIOR -->
+    <nav class="top-navbar">
+        <div class="logo">
+            <i class='bx bx-ghost'></i>
+            <span>MusicGround</span>
+        </div>
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/mg/explorar">Explorar</a>
+            <a href="/player">Reproductor</a>
+            <a href="user-dashboard.html" class="active">Mi Dashboard</a>
+        </div>
+        <div class="nav-actions">
+            <div class="user-dropdown" id="userDropdown">
+                <div class="user-btn" onclick="toggleDropdown()">
+                    <i class='bx bx-user-circle'></i>
+                    <span id="userNameDisplay">Usuario</span>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <div class="dropdown-header">
+                        <div class="dropdown-avatar" id="dropdownAvatar">
+                            <i class='bx bx-user-circle'></i>
+                        </div>
+                        <div>
+                            <strong id="dropdownUserName">Usuario</strong>
+                            <small id="dropdownUserEmail">usuario@musicground.com</small>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" onclick="handleLogout()" class="logout-item"><i class='bx bx-log-out'></i> Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="user-profile-card">
+                <div class="profile-image-container">
+                    <div class="user-avatar-large" id="profileAvatar">
+                        <img id="profileImage" src="" alt="Foto de perfil">
+                        <i class='bx bx-user-circle' id="defaultAvatarIcon"></i>
+                    </div>
+                    <button class="add-photo-btn" onclick="triggerFileUpload()" title="Subir foto de perfil">
+                        <i class='bx bx-plus'></i>
+                    </button>
+                    <input type="file" id="profileImageInput" accept="image/jpeg, image/png, image/jpg" style="display: none;">
+                </div>
+                <h3 id="profileUserName">Usuario</h3>
+                <p id="profileUserEmail">usuario@musicground.com</p>
+                <span class="user-badge">Oyente</span>
+            </div>
+            <div class="sidebar-menu">
+                
+                <a href="#resumen" class="active" data-section="resumen">
+                    <i class='bx bx-home'></i>
+                    <span>Resumen</span>
+                </a>
+                <a href="#estadisticas" data-section="estadisticas">
+                    <i class='bx bx-stats'></i>
+                    <span>Estadísticas</span>
+                </a>
+                <a href="#favoritos" data-section="favoritos">
+                    <i class='bx bx-heart'></i>
+                    <span>Favoritos</span>
+                </a>
+                <a href="#playlists" data-section="playlists">
+                    <i class='bx bx-list-ul'></i>
+                    <span>Mis Playlists</span>
+                </a>
+                <a href="#historial" data-section="historial">
+                    <i class='bx bx-history'></i>
+                    <span>Historial</span>
+                </a>
+
+                <a href="#configuracion" data-section="configuracion">
+                    <i class='bx bx-cog'></i>
+                    <span>Configuración</span>
+                </a>
+
+                
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Sección Resumen -->
+            <div id="resumen" class="dashboard-section active">
+                <div class="section-header">
+                    <h1>Bienvenido de vuelta, <span id="welcomeUserName">Usuario</span></h1>
+                    <p>Este es tu resumen semanal de actividad</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class='bx bx-headphone'></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="totalPlays">0</span>
+                            <span class="stat-label">Reproducciones totales</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class='bx bx-heart'></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="totalFavorites">0</span>
+                            <span class="stat-label">Canciones favoritas</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class='bx bx-time'></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="totalMinutes">0</span>
+                            <span class="stat-label">Minutos escuchados</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class='bx bx-calendar'></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="memberDays">0</span>
+                            <span class="stat-label">Días como miembro</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reproductor Mini -->
+                <div class="mini-player">
+                </div>
+
+                <!-- Actividad Reciente -->
+                <div class="recent-activity">
+                    <h2>Actividad reciente</h2>
+                    <div class="activity-list" id="recentActivity"></div>
+                </div>
+
+                <!-- Top Artistas -->
+                <div class="top-artists">
+                    <h2>Tus artistas más escuchados</h2>
+                    <div class="artists-list" id="topArtists"></div>
+                </div>
+            </div>
+
+            <!-- Sección Estadísticas -->
+            <div id="estadisticas" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Tus estadísticas</h1>
+                    <p>Análisis detallado de tu actividad musical</p>
+                </div>
+
+                <div class="stats-detail-grid">
+                    <div class="stats-detail-card">
+                        <h3>Por género</h3>
+                        <div class="genre-stats" id="genreStats"></div>
+                    </div>
+                    <div class="stats-detail-card">
+                        <h3>Por hora del día</h3>
+                        <div class="hour-stats" id="hourStats">
+                            <div class="hour-bar"><span>Mañana</span><div class="bar"><div class="fill" style="width: 65%"></div></div><span>65%</span></div>
+                            <div class="hour-bar"><span>Tarde</span><div class="bar"><div class="fill" style="width: 80%"></div></div><span>80%</span></div>
+                            <div class="hour-bar"><span>Noche</span><div class="bar"><div class="fill" style="width: 45%"></div></div><span>45%</span></div>
+                            <div class="hour-bar"><span>Madrugada</span><div class="bar"><div class="fill" style="width: 20%"></div></div><span>20%</span></div>
+                        </div>
+                    </div>
+                    <div class="stats-detail-card full-width">
+                        <h3>Actividad por día</h3>
+                        <div class="weekly-stats" id="weeklyStats"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Favoritos con controles -->
+            <div id="favoritos" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Tus canciones favoritas</h1>
+                    <p>Canciones que has marcado como favoritas</p>
+                </div>
+                <div class="favorites-grid" id="favoritesGrid"></div>
+            </div>
+
+            <!-- Sección Playlists -->
+            <div id="playlists" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Mis playlists</h1>
+                    <p>Todas tus playlists personalizadas</p>
+                </div>
+                <div class="playlists-grid" id="playlistsGrid"></div>
+            </div>
+
+            <!-- Sección Historial -->
+            <div id="historial" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Historial de reproducción</h1>
+                    <p>Últimas canciones que has escuchado</p>
+                </div>
+                <div class="history-list" id="historyList"></div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<script src="playerdas.js"></script>
+</body>
+</html>

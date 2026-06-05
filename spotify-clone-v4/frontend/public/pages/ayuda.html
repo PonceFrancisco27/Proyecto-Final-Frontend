@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="ayuda.css">
+    
+    <title>MusicGround - Centro de Ayuda</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-content">
+        <a href="/" class="logo">
+            <span class="material-icons-round">graphic_eq</span>
+            <span>MusicGround</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/mg/explorar">Explorar</a>
+            <a href="/mg/artistpro" class="active">Para artistas</a>
+            <a href="/mg/goplus">Go+</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn-login" onclick="window.location.href='/'">Iniciar sesión</button>
+            <button class="btn-signup" onclick="window.location.href='/'">Unirse</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="header-bg-grid"></div>
+    <div class="header-content">
+        <div class="breadcrumb">
+            <a href="/">Inicio</a>
+            <span class="material-icons-round">chevron_right</span>
+            <span class="active">Centro de Ayuda</span>
+        </div>
+        <h1>Centro de <span class="highlight">Ayuda</span></h1>
+        <div class="header-meta">
+            <span class="material-icons-round">help</span>
+            <span>¿Cómo podemos ayudarte?</span>
+        </div>
+    </div>
+</div>
+
+<!-- Search Section -->
+<div class="search-section">
+    <div class="search-container">
+        <div class="search-box">
+            <i class='bx bx-search-alt'></i>
+            <input type="text" placeholder="Buscar en el centro de ayuda..." id="searchInput">
+        </div>
+    </div>
+</div>
+
+<!-- Layout Container -->
+<div class="layout-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-sticky">
+            <div class="sidebar-section">
+                <h4>Categorías</h4>
+                <div class="sidebar-nav">
+                    <a href="#cuenta" class="active">
+                        <span class="material-icons-round">person</span>
+                        Cuenta y perfil
+                    </a>
+                    <a href="#pago">
+                        <span class="material-icons-round">payments</span>
+                        Pagos y suscripciones
+                    </a>
+                    <a href="#musica">
+                        <span class="material-icons-round">music_note</span>
+                        Música y playlists
+                    </a>
+                    <a href="#artista">
+                        <span class="material-icons-round">mic</span>
+                        Para artistas
+                    </a>
+                    <a href="#tecnico">
+                        <span class="material-icons-round">settings</span>
+                        Problemas técnicos
+                    </a>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h4>Recursos</h4>
+                <div class="sidebar-nav">
+                    <a href="#tutoriales">
+                        <span class="material-icons-round">school</span>
+                        Tutoriales
+                    </a>
+                    <a href="#contacto">
+                        <span class="material-icons-round">contact_support</span>
+                        Contacto directo
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-toc">
+                <h4>En esta página</h4>
+                <div class="toc-nav">
+                    <a href="#cuenta">Cuenta y perfil</a>
+                    <a href="#pago">Pagos y suscripciones</a>
+                    <a href="#musica">Música y playlists</a>
+                    <a href="#artista">Para artistas</a>
+                    <a href="#tecnico">Problemas técnicos</a>
+                    <a href="#tutoriales">Tutoriales</a>
+                    <a href="#contacto">Contacto directo</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Intro Card -->
+        <div class="intro-card reveal">
+            <span class="material-icons-round">support_agent</span>
+            <p>Bienvenido al Centro de Ayuda de MusicGround. Encuentra respuestas a tus preguntas, tutoriales y formas de contactarnos. Si no encuentras lo que buscas, nuestro equipo de soporte está disponible 24/7.</p>
+        </div>
+
+        <!-- Section: Cuenta y perfil -->
+        <div id="cuenta" class="terms-section reveal">
+            <div class="section-tag">Categoría</div>
+            <h2> Cuenta y perfil</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Cómo creo una cuenta en MusicGround?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Puedes crear una cuenta haciendo clic en "Unirse" en la esquina superior derecha. Completa el formulario con tu nombre, correo electrónico y contraseña. También puedes registrarte con Google o Facebook para mayor comodidad.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Cómo cambio mi contraseña?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Ve a Configuración → Seguridad → Cambiar contraseña. Ingresa tu contraseña actual y luego la nueva contraseña. Recibirás un correo de confirmación cuando el cambio sea exitoso.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Puedo eliminar mi cuenta?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Sí, puedes eliminar tu cuenta desde Configuración → Seguridad → Eliminar cuenta. Ten en cuenta que esta acción es irreversible y perderás todo tu contenido, playlists y datos.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Cómo personalizo mi perfil?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Ve a tu perfil y haz clic en "Editar perfil". Puedes cambiar tu foto de perfil, biografía, enlaces a redes sociales y preferencias de privacidad.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Pagos y suscripciones -->
+        <div id="pago" class="terms-section reveal">
+            <div class="section-tag">Categoría</div>
+            <h2> Pagos y suscripciones</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Cómo me suscribo a Go+?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Ve a la página de Go+ y selecciona el plan que prefieras. Completa el proceso de pago con tarjeta de crédito, PayPal o tu método preferido. Tu suscripción se activará inmediatamente.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Puedo cancelar mi suscripción en cualquier momento?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Sí, puedes cancelar tu suscripción desde Configuración → Suscripciones. No hay cargos por cancelación y seguirás disfrutando del servicio hasta el final del período facturado.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Qué métodos de pago aceptan?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Aceptamos tarjetas de crédito/débito (Visa, Mastercard, American Express), PayPal, y pagos a través de tiendas de aplicaciones (App Store, Google Play).
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Por qué me cobraron dos veces?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Si ves un cargo duplicado, contacta a soporte inmediatamente. Revisaremos tu caso y procesaremos el reembolso correspondiente en un plazo de 3-5 días hábiles.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Música y playlists -->
+        <div id="musica" class="terms-section reveal">
+            <div class="section-tag">Categoría</div>
+            <h2> Música y playlists</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Cómo creo una playlist?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Ve a "Biblioteca" → "Crear playlist". Nombra tu playlist y comienza a agregar canciones desde el buscador o desde tus canciones favoritas.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Puedo compartir mis playlists?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Sí, puedes compartir cualquier playlist pública mediante un enlace. También puedes compartirlas directamente en redes sociales o con otros usuarios de MusicGround.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Cómo descargo canciones para escuchar offline?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Con la suscripción Go+, puedes descargar canciones y playlists completas haciendo clic en el ícono de descarga. Las canciones estarán disponibles en tu biblioteca sin conexión.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Qué calidad de audio ofrece MusicGround?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Los usuarios gratuitos escuchan en calidad estándar (160 kbps). Los suscriptores Go+ tienen acceso a calidad alta (320 kbps). Próximamente lanzaremos Hi-Res Audio sin pérdida.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Para artistas -->
+        <div id="artista" class="terms-section reveal">
+            <div class="section-tag">Categoría</div>
+            <h2> Para artistas</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Cómo subo mi música a MusicGround?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Si eres artista, puedes subir tu música desde el panel de artista. Ve a "Subir música", selecciona los archivos de audio (WAV, FLAC, MP3) y completa la información de la pista (título, género, etiquetas).
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Cómo recibo mis regalías?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Las regalías se calculan mensualmente y se depositan en tu cuenta de MusicGround. Puedes retirar tus fondos a tu cuenta bancaria o PayPal. El pago mínimo es de $100 MXN.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿Necesito un plan específico para subir música?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Puedes subir música de forma gratuita con el plan Artist (3 horas). Para subidas ilimitadas, te recomendamos el plan Artist Pro ($125/mes).
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>¿A qué plataformas distribuye MusicGround?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Distribuimos tu música a Spotify, Apple Music, Amazon Music, TikTok, Instagram, YouTube Music y más de 30 plataformas globales.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Problemas técnicos -->
+        <div id="tecnico" class="terms-section reveal">
+            <div class="section-tag">Categoría</div>
+            <h2> Problemas técnicos</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>La música no se reproduce, ¿qué hago?</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Verifica tu conexión a internet, limpia la caché de tu navegador o app, y asegúrate de tener la última versión de MusicGround. Si el problema persiste, contacta a soporte.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>La app se cierra inesperadamente</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Intenta actualizar la app a la última versión. Si el problema continúa, desinstala y reinstala la aplicación. También puedes revisar si tu dispositivo cumple con los requisitos mínimos.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>No puedo iniciar sesión en mi cuenta</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Usa la opción "Olvidé mi contraseña" para restablecerla. Si el problema persiste, verifica que tu correo esté verificado y que no tengas bloqueada la cuenta por múltiples intentos fallidos.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons-round">help</span>
+                        <strong>La página no carga correctamente</strong>
+                    </div>
+                    <div class="faq-answer">
+                        Limpia la caché de tu navegador, desactiva extensiones que puedan estar interfiriendo o prueba en otro navegador. También puedes intentar acceder desde la aplicación móvil.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Tutoriales -->
+        <div id="tutoriales" class="terms-section reveal">
+            <div class="section-tag">Recursos</div>
+            <h2>Tutoriales</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="material-icons-round">play_circle</span>
+                    <strong>Primeros pasos en MusicGround</strong>
+                    <p>Aprende a crear tu cuenta, navegar por la plataforma y descubrir música nueva.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="material-icons-round">playlist_play</span>
+                    <strong>Cómo crear playlists increíbles</strong>
+                    <p>Organiza tu música y comparte tus playlists favoritas con la comunidad.</p>
+                </div>
+                <div class="feature-item neutral">
+                    <span class="material-icons-round">mic</span>
+                    <strong>Guía para artistas</strong>
+                    <p>Sube tu música, promociona tus canciones y empieza a monetizar tu talento.</p>
+                </div>
+                <div class="feature-item neutral">
+                    <span class="material-icons-round">download</span>
+                    <strong>Escucha offline con Go+</strong>
+                    <p>Descarga tus canciones favoritas y llévalas a donde vayas sin conexión.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Contacto directo -->
+        <div id="contacto" class="terms-section reveal">
+            <div class="section-tag">Recursos</div>
+            <h2> Contacto directo</h2>
+            <p>¿No encontraste lo que buscabas? Nuestro equipo de soporte está aquí para ayudarte.</p>
+            
+            <div class="contact-grid">
+                <a href="mailto:soporte@musicground.com" class="contact-card">
+                    <span class="material-icons-round">email</span>
+                    <strong>soporte@musicground.com</strong>
+                    <span>Respuesta en 24 horas</span>
+                </a>
+                <a href="#" class="contact-card">
+                    <span class="material-icons-round">chat</span>
+                    <strong>Chat en vivo</strong>
+                    <span>Disponible 24/7</span>
+                </a>
+                <a href="#" class="contact-card">
+                    <span class="material-icons-round">forum</span>
+                    <strong>Foro de ayuda</strong>
+                    <span>Ayuda de la comunidad</span>
+                </a>
+            </div>
+            
+            <div class="highlight-box">
+                <span class="material-icons-round">schedule</span>
+                <p><strong>Horario de atención:</strong> Lunes a viernes de 9:00 a 21:00, fines de semana de 10:00 a 18:00 (tiempo del centro de México). Chat en vivo disponible 24/7.</p>
+            </div>
+        </div>
+
+        <!-- Last updated -->
+        <div class="last-updated">
+            <span class="material-icons-round">update</span>
+            <span>Última actualización: 22 de mayo, 2026</span>
+        </div>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="footer-logo">
+               <span class="material-icons-round">graphic_eq</span>
+                <span>MusicGround</span>
+            </div>
+            <p>Donde vive toda escena musical. Conectamos artistas y oyentes en una plataforma segura y vibrante.</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <a href="/mg/terminos">Términos de Uso</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Política de Cookies</a>
+                <a href="#">Configuración de Cookies</a>
+            </div>
+            <div class="footer-column">
+                <h4>Soporte</h4>
+                <a href="/mg/ayuda" class="active">Centro de Ayuda</a>
+                <a href="#">Reportar problema</a>
+                <a href="#">Estado del servicio</a>
+                <a href="#">Contacto</a>
+            </div>
+            <div class="footer-column">
+                <h4>Acerca de</h4>
+                <a href="#">Acerca de MusicGround</a>
+                <a href="#">Información de la Empresa</a>
+                <a href="#">Información de Prensa</a>
+            </div>
+            <div class="footer-column">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/realmusicground/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://x.com/MusicGroundMx"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://youtube.com/@musicground-c2l"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 MusicGround. Donde vive toda escena musical.</p>
+    </div>
+</footer>
+
+<script>
+    // Búsqueda en el centro de ayuda
+    const searchInput = document.getElementById('searchInput');
+    const faqItems = document.querySelectorAll('.faq-item');
+    const sections = document.querySelectorAll('.terms-section');
+    
+    function searchHelp() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        
+        sections.forEach(section => {
+            let hasMatch = false;
+            const questions = section.querySelectorAll('.faq-item');
+            
+            questions.forEach(question => {
+                const text = question.innerText.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    question.style.display = '';
+                    hasMatch = true;
+                } else {
+                    question.style.display = 'none';
+                }
+            });
+            
+            if (searchTerm === '' || hasMatch) {
+                section.style.display = '';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    }
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', searchHelp);
+    }
+    
+
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            faqItem.classList.toggle('open');
+        });
+    });
+    
+    const revealElements = document.querySelectorAll('.reveal, .feature-item, .contact-card');
+    
+    function checkReveal() {
+        const windowHeight = window.innerHeight;
+        const revealThreshold = 100;
+        
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight - revealThreshold) {
+                element.classList.add('revealed');
+            }
+        });
+    }
+    
+    const sectionsNav = document.querySelectorAll('.terms-section');
+    const navLinks = document.querySelectorAll('.sidebar-nav a, .toc-nav a');
+    
+    function updateActiveSection() {
+        let current = '';
+        const scrollPosition = window.scrollY + 150;
+        
+        sectionsNav.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (href && href.substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === "#" || targetId === "") return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.pushState(null, null, targetId);
+            }
+        });
+    });
+    
+    // Initialize
+    window.addEventListener('scroll', () => {
+        checkReveal();
+        updateActiveSection();
+    });
+    window.addEventListener('load', () => {
+        checkReveal();
+        updateActiveSection();
+    });
+</script>
+
+</body>
+</html>

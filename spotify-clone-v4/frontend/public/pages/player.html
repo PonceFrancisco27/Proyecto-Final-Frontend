@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="player.css">
+    
+    <title>MusicGround - Reproductor Musical</title>
+</head>
+<body>
+
+<div id="player-view" class="view active">
+    <!-- NAVBAR SUPERIOR -->
+    <nav class="top-navbar">
+        <div class="logo">
+            <i class='bx bx-ghost'></i>
+            <span>MusicGround</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Inicio</a>
+            <a href="#">Explorar</a>
+            <a href="#">Biblioteca</a>
+            <a href="#">Playlists</a>
+        </div>
+        <div class="nav-actions">
+            <button class="upgrade-btn">Mejorar cuenta</button>
+            <div class="user-dropdown" id="userDropdown">
+                <div class="user-btn" onclick="toggleDropdown()">
+                    <i class='bx bx-user-circle'></i>
+                    <span id="userNameDisplay">Usuario</span>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <div class="dropdown-header">
+                        <i class='bx bx-user'></i>
+                        <div>
+                            <strong id="dropdownUserName">Usuario</strong>
+                            <small id="dropdownUserEmail">usuario@musicground.com</small>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" onclick="navigateTo('perfil')"><i class='bx bx-user'></i> Mi perfil</a>
+                    <a href="#" onclick="navigateTo('estadisticas')"><i class='bx bx-stats'></i> Estadísticas</a>
+                    <a href="#" onclick="navigateTo('favoritos')"><i class='bx bx-heart'></i> Canciones favoritas</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" onclick="handleLogout()" class="logout-item"><i class='bx bx-log-out'></i> Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BARRA DE BÚSQUEDA (sin línea de separación) -->
+    <div class="search-section">
+        <div class="search-bar">
+            <i class='bx bx-search-alt'></i>
+            <input type="text" placeholder="¿Qué quieres escuchar?" id="searchInput">
+        </div>
+    </div>
+
+    <div class="player-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="menu">
+                <h5>MENU</h5>
+                <ul>
+                    <li class="active" onclick="navigateTo('inicio')">
+                        <i class='bx bx-home'></i>
+                        <span>Inicio</span>
+                    </li>
+                    <li onclick="navigateTo('biblioteca')">
+                        <i class='bx bx-music-library'></i>
+                        <span>Biblioteca</span>
+                    </li>
+                    <li onclick="navigateTo('playlists')">
+                        <i class='bx bx-list-ul'></i>
+                        <span>Playlists</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu">
+                <h5>TU BIBLIOTECA</h5>
+                <ul>
+                    <li onclick="navigateTo('favoritos')">
+                        <i class='bx bx-heart'></i>
+                        <span>Canciones que te gustan</span>
+                    </li>
+                    <li onclick="navigateTo('artistas')">
+                        <i class='bx bx-user'></i>
+                        <span>Artistas</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="playlists-section">
+                <div class="playlists-header">
+                    <h5>PLAYLISTS</h5>
+                    <i class='bx bx-plus' onclick="crearPlaylist()"></i>
+                </div>
+                <div id="playlists-list" class="playlists-list"></div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sección de Bienvenida -->
+            <section class="welcome-section">
+                <h1>Buenas noches</h1>
+                <div class="recent-grid" id="recentGrid"></div>
+            </section>
+
+            <!-- Sección de Playlists destacadas -->
+            <section class="featured-section">
+                <div class="section-header">
+                    <h2>Playlists destacadas</h2>
+                    <a href="#" class="view-all">Ver todos</a>
+                </div>
+                <div class="featured-grid" id="featuredGrid"></div>
+            </section>
+
+            <!-- Sección de Artistas populares -->
+            <section class="artists-section">
+                <div class="section-header">
+                    <h2>Artistas populares</h2>
+                    <a href="#" class="view-all">Ver todos</a>
+                </div>
+                <div class="artists-grid" id="artistsGrid"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- REPRODUCTOR FLOTANTE EN LA PARTE INFERIOR -->
+    <div class="bottom-player">
+        <div class="bottom-player-content">
+            <!-- Info de la canción actual -->
+            <div class="player-song-info">
+                <div class="player-song-cover" id="playerCover">
+                    <i class='bx bx-music'></i>
+                </div>
+                <div class="player-song-details">
+                    <h4 id="bottomCurrentTitle">Selecciona una canción</h4>
+                    <p id="bottomCurrentArtist">-</p>
+                </div>
+                <i class='bx bx-heart' id="bottomFavoriteBtn" onclick="toggleFavorite()"></i>
+            </div>
+
+            <!-- Controles de reproducción -->
+            <div class="player-controls-center">
+                <div class="control-buttons">
+                    <button onclick="playPrevious()"><i class='bx bx-skip-previous'></i></button>
+                    <button class="play-btn" onclick="togglePlay()"><i class='bx bx-play-circle' id="playPauseIcon"></i></button>
+                    <button onclick="playNext()"><i class='bx bx-skip-next'></i></button>
+                </div>
+                <div class="progress-container">
+                    <span id="currentTime">0:00</span>
+                    <div class="progress-bar" onclick="seek(event)">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            <!-- Controles de volumen y cola -->
+            <div class="player-controls-right">
+                <i class='bx bx-list-ul' onclick="toggleQueue()"></i>
+                <div class="volume-container">
+                    <i class='bx bx-volume-low' id="volumeIcon" onclick="toggleMute()"></i>
+                    <div class="volume-bar" onclick="setVolume(event)">
+                        <div class="volume-fill" id="volumeFill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cola de reproducción -->
+        <div class="queue-panel" id="queuePanel">
+            <div class="queue-header">
+                <h5>COLA DE REPRODUCCIÓN</h5>
+                <i class='bx bx-x' onclick="toggleQueue()"></i>
+            </div>
+            <div id="queueList" class="queue-list"></div>
+        </div>
+    </div>
+</div>
+
+<script src="player.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+    
+    <link rel="stylesheet" href="seguridad.css">
+    
+    <title>MusicGround - Centro de Seguridad</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-content">
+        <a href="/" class="logo">
+            <span class="material-icons-round">graphic_eq</span>
+            <span>MusicGround</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/mg/explorar">Explorar</a>
+            <a href="/mg/artistpro" class="active">Para artistas</a>
+            <a href="/mg/goplus">Go+</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn-login" onclick="window.location.href='/'">Iniciar sesión</button>
+            <button class="btn-signup" onclick="window.location.href='/'">Unirse</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="header-bg-grid"></div>
+    <div class="header-content">
+        <div class="breadcrumb">
+            <a href="/">Inicio</a>
+            <span class="material-icons-round">chevron_right</span>
+            <span class="active">Centro de Seguridad</span>
+        </div>
+        <h1>Centro de <span class="highlight">Seguridad</span></h1>
+        <div class="header-meta">
+            <span class="material-icons-round">verified</span>
+            <span>Tu seguridad es nuestra prioridad</span>
+        </div>
+    </div>
+</div>
+
+<!-- Layout Container -->
+<div class="layout-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-sticky">
+            <div class="sidebar-section">
+                <h4>Recursos</h4>
+                <div class="sidebar-nav">
+                    <a href="#protege-cuenta" class="active">
+                        <span class="material-icons-round">lock</span>
+                        Protege tu cuenta
+                    </a>
+                    <a href="#reportar-problema">
+                        <span class="material-icons-round">flag</span>
+                        Reportar un problema
+                    </a>
+                    <a href="#phishing">
+                        <span class="material-icons-round">warning</span>
+                        Phishing y estafas
+                    </a>
+                    <a href="#consejos-seguridad">
+                        <span class="material-icons-round">tips_and_updates</span>
+                        Consejos de seguridad
+                    </a>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h4>Políticas</h4>
+                <div class="sidebar-nav">
+                    <a href="#seguridad-datos">
+                        <span class="material-icons-round">data_usage</span>
+                        Seguridad de datos
+                    </a>
+                    <a href="#contenido-inapropiado">
+                        <span class="material-icons-round">report</span>
+                        Contenido inapropiado
+                    </a>
+                    <a href="#menores">
+                        <span class="material-icons-round">family_restroom</span>
+                        Seguridad para menores
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-toc">
+                <h4>En esta página</h4>
+                <div class="toc-nav">
+                    <a href="#protege-cuenta">Protege tu cuenta</a>
+                    <a href="#reportar-problema">Reportar un problema</a>
+                    <a href="#phishing">Phishing y estafas</a>
+                    <a href="#consejos-seguridad">Consejos de seguridad</a>
+                    <a href="#seguridad-datos">Seguridad de datos</a>
+                    <a href="#contenido-inapropiado">Contenido inapropiado</a>
+                    <a href="#menores">Seguridad para menores</a>
+                    <a href="#contacto">Contacto de seguridad</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Intro Card -->
+        <div class="intro-card reveal">
+            <span class="material-icons-round">security</span>
+            <p>En MusicGround, la seguridad de tu cuenta y tus datos es nuestra máxima prioridad. Esta guía te ayudará a mantenerte seguro mientras disfrutas de la música. Si tienes alguna pregunta, visita nuestro <a href="/mg/ayuda">centro de ayuda</a> o contáctanos directamente.</p>
+        </div>
+
+        <!-- Section: Protege tu cuenta -->
+        <div id="protege-cuenta" class="terms-section reveal">
+            <div class="section-tag">Seguridad</div>
+            <h2> Protege tu cuenta</h2>
+            <p>Tu cuenta de MusicGround contiene información personal y tu biblioteca musical. Sigue estas mejores prácticas para mantenerla segura:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="material-icons-round">vpn_key</span>
+                    <strong>Contraseña segura</strong>
+                    <p>Usa una contraseña única, larga y difícil de adivinar. Combina letras, números y símbolos.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="material-icons-round">verified_user</span>
+                    <strong>Verificación en dos pasos</strong>
+                    <p>Activa la autenticación en dos pasos (2FA) para una capa extra de seguridad.</p>
+                </div>
+                <div class="feature-item neutral">
+                    <span class="material-icons-round">devices</span>
+                    <strong>Gestiona dispositivos</strong>
+                    <p>Revisa periódicamente los dispositivos conectados a tu cuenta.</p>
+                </div>
+                <div class="feature-item neutral">
+                    <span class="material-icons-round">notifications_active</span>
+                    <strong>Alertas de seguridad</strong>
+                    <p>Mantén activas las notificaciones para actividades sospechosas.</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <span class="material-icons-round">tips_and_updates</span>
+                <p><strong>Recomendación:</strong> Cambia tu contraseña cada 3-6 meses y nunca la reutilices en otras plataformas. Usa un gestor de contraseñas para mayor seguridad.</p>
+            </div>
+        </div>
+
+        <!-- Section: Reportar un problema -->
+        <div id="reportar-problema" class="terms-section reveal">
+            <div class="section-tag">Reportes</div>
+            <h2>Reportar un problema</h2>
+            <p>Si encuentras actividad sospechosa, contenido inapropiado o crees que tu cuenta ha sido comprometida, repórtalo inmediatamente:</p>
+            
+            <ul class="styled-list">
+                <li>
+                    <span class="material-icons-round">flag</span>
+                    <span><strong>Contenido inapropiado</strong> — Reporta canciones, comentarios o perfiles que violen nuestras políticas.</span>
+                </li>
+                <li>
+                    <span class="material-icons-round">person_off</span>
+                    <span><strong>Suplantación de identidad</strong> — Reporta cuentas falsas que se hagan pasar por ti o por otros.</span>
+                </li>
+                <li>
+                    <span class="material-icons-round">account_balance_wallet</span>
+                    <span><strong>Actividad sospechosa</strong> — Si ves actividad extraña en tu cuenta, cambia tu contraseña y contáctanos.</span>
+                </li>
+                <li>
+                    <span class="material-icons-round">copyright</span>
+                    <span><strong>Infracción de derechos</strong> — Reporta violaciones de derechos de autor a través de nuestro formulario dedicado.</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Section: Phishing y estafas -->
+        <div id="phishing" class="terms-section reveal">
+            <div class="section-tag">Prevención</div>
+            <h2> Phishing y estafas</h2>
+            <p>Los atacantes pueden intentar engañarte para obtener tu información personal. Aprende a identificarlos:</p>
+            
+            <div class="warning-list">
+                <div class="warning-item">
+                    <span class="material-icons-round">email</span>
+                    <div>
+                        <strong>Correos sospechosos</strong>
+                        <p>MusicGround nunca te pedirá tu contraseña por correo electrónico. Verifica siempre el remitente.</p>
+                    </div>
+                </div>
+                <div class="warning-item">
+                    <span class="material-icons-round">link</span>
+                    <div>
+                        <strong>Enlaces falsos</strong>
+                        <p>No hagas clic en enlaces sospechosos. Revisa que la URL comience con <strong>https://musicground.com</strong></p>
+                    </div>
+                </div>
+                <div class="warning-item">
+                    <span class="material-icons-round">inbox</span>
+                    <div>
+                        <strong>Mensajes directos falsos</strong>
+                        <p>Desconfía de mensajes que ofrezcan regalos o premios. MusicGround no realiza este tipo de promociones no solicitadas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-box warning">
+                <span class="material-icons-round">report_problem</span>
+                <p><strong>¿Recibiste un mensaje sospechoso?</strong> Reenvíalo a <strong>security@musicground.com</strong> y luego elimínalo. No respondas ni hagas clic en ningún enlace.</p>
+            </div>
+        </div>
+
+        <!-- Section: Consejos de seguridad -->
+        <div id="consejos-seguridad" class="terms-section reveal">
+            <div class="section-tag">Mejores prácticas</div>
+            <h2>Consejos de seguridad</h2>
+            <p>Sigue estos consejos para mantenerte seguro en MusicGround:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="material-icons-round">password</span>
+                    <strong>Usa 2FA</strong>
+                    <p>Activa la autenticación en dos pasos desde Ajustes → Seguridad.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="material-icons-round">logout</span>
+                    <strong>Cierra sesión</strong>
+                    <p>Siempre cierra sesión en dispositivos compartidos o públicos.</p>
+                </div>
+                <div class="feature-item neutral">
+                    <span class="material-icons-round">update</span>
+                    <strong>Mantén todo actualizado</strong>
+                    <p>Actualiza la app, tu navegador y tu sistema operativo regularmente.</p>
+                </div>
+                <div class="feature-item neutral">
+                    <span class="material-icons-round">info</span>
+                    <strong>Infórmate</strong>
+                    <p>Conoce las últimas amenazas leyendo nuestro blog de seguridad.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Seguridad de datos -->
+        <div id="seguridad-datos" class="terms-section reveal">
+            <div class="section-tag">Protección</div>
+            <h2> Seguridad de datos</h2>
+            <p>En MusicGround protegemos tu información con estándares de nivel empresarial:</p>
+            
+            <ul class="styled-list">
+                <li>
+                    <span class="material-icons-round">encryption</span>
+                    <span><strong>Cifrado de extremo a extremo</strong> — Tus datos están protegidos mediante cifrado AES-256 en tránsito y en reposo.</span>
+                </li>
+                <li>
+                    <span class="material-icons-round">cloud_done</span>
+                    <span><strong>Copias de seguridad seguras</strong> — Realizamos backups cifrados y almacenados en ubicaciones seguras.</span>
+                </li>
+                <li>
+                    <span class="material-icons-round">security</span>
+                    <span><strong>Auditorías regulares</strong> — Realizamos auditorías de seguridad periódicas para identificar y corregir vulnerabilidades.</span>
+                </li>
+                <li>
+                    <span class="material-icons-round">gpp_good</span>
+                    <span><strong>Monitoreo 24/7</strong> — Nuestro equipo de seguridad monitorea la plataforma constantemente.</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Section: Contenido inapropiado -->
+        <div id="contenido-inapropiado" class="terms-section reveal">
+            <div class="section-tag">Moderación</div>
+            <h2> Contenido inapropiado</h2>
+            <p>MusicGround prohíbe estrictamente contenido que:</p>
+            
+            <ul class="styled-list">
+                <li>
+                    <span class="material-icons-round">gavel</span>
+                    <span>Promueva violencia, odio o discriminación</span>
+                </li>
+                <li>
+                    <span class="material-icons-round">explicit</span>
+                    <span>Contenga material explícito o sexual no consensuado</span>
+                </li>
+                <li>
+                    <span class="material-icons-round">block</span>
+                    <span>Infrinda derechos de autor o propiedad intelectual</span>
+                </li>
+                <li>
+                    <span class="material-icons-round">spam</span>
+                    <span>Sea spam, engañoso o fraudulento</span>
+                </li>
+            </ul>
+            
+            <div class="highlight-box">
+                <span class="material-icons-round">how_to_reg</span>
+                <p>Nuestro equipo de moderación revisa los reportes dentro de las 24 horas. Los infractores pueden enfrentar suspensiones temporales o permanentes.</p>
+            </div>
+        </div>
+
+        <!-- Section: Seguridad para menores -->
+        <div id="menores" class="terms-section reveal">
+            <div class="section-tag">Familia</div>
+            <h2>Seguridad para menores</h2>
+            <p>MusicGround se compromete a crear un entorno seguro para todos los usuarios, especialmente los más jóvenes:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-item neutral">
+                    <span class="material-icons-round">family_restroom</span>
+                    <strong>Modo familiar</strong>
+                    <p>Activa el modo familiar para filtrar contenido explícito.</p>
+                </div>
+                <div class="feature-item neutral">
+                    <span class="material-icons-round">timer</span>
+                    <strong>Controles parentales</strong>
+                    <p>Establece límites de tiempo y controla las interacciones.</p>
+                </div>
+                <div class="feature-item neutral">
+                    <span class="material-icons-round">block</span>
+                    <strong>Lista de bloqueo</strong>
+                    <p>Bloquea usuarios o contenido que consideres inapropiado.</p>
+                </div>
+                <div class="feature-item neutral">
+                    <span class="material-icons-round">report</span>
+                    <strong>Reporte fácil</strong>
+                    <p>Los menores pueden reportar contenido con un solo clic.</p>
+                </div>
+            </div>
+            
+            <div olass="highlight-box warning">
+                <span class="material-icons-round">info</span>
+                <p><strong>Para padres:</strong> Recomendamos supervisar la actividad de tus hijos en la plataforma. MusicGround no permite cuentas para menores de 13 años sin consentimiento parental.</p>
+            </div>
+        </div>
+
+        <!-- Section: Contacto de seguridad -->
+        <div id="contacto" class="terms-section reveal">
+            <div class="section-tag">Contacto</div>
+            <h2> Contacto de seguridad</h2>
+            <p>Si necesitas asistencia inmediata con un problema de seguridad, contáctanos a través de estos canales:</p>
+            
+            <div class="contact-grid">
+                <a href="mailto:security@musicground.com" class="contact-card">
+                    <span class="material-icons-round">email</span>
+                    <strong>security@musicground.com</strong>
+                    <span>Reportes de seguridad</span>
+                </a>
+                <a href="/mg/ayuda" class="contact-card">
+                    <span class="material-icons-round">help</span>
+                    <strong>Centro de ayuda</strong>
+                    <span>Artículos y guías</span>
+                </a>
+                <a href="#" class="contact-card">
+                    <span class="material-icons-round">forum</span>
+                    <strong>Foro de la comunidad</strong>
+                    <span>Ayuda entre usuarios</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Last updated -->
+        <div class="last-updated">
+            <span class="material-icons-round">update</span>
+            <span>Última actualización: 20 de mayo, 2026</span>
+        </div>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <span class="material-icons-round">graphic_eq</span>
+                <span>MusicGround</span>
+            </div>
+            <p>Donde vive toda escena musical. Conectamos artistas y oyentes en una plataforma segura y vibrante.</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <a href="/mg/terminos">Términos de Uso</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Política de Cookies</a>
+                <a href="#">Configuración de Cookies</a>
+            </div>
+            <div class="footer-column">
+                <h4>Seguridad</h4>
+                <a href="/mg/seguridad".html" class="active">Centro de Seguridad</a>
+                <a href="/mg/seguridad">Reportar problema</a>
+                <a href="comunidad.html">Directrices de la Comunidad</a>
+                <a href="politicasmoderacion.html#">Política de Moderación</a>
+            </div>
+            <div class="footer-column">
+                <h4>Acerca de</h4>
+                <a href="/mg/info">Acerca de MusicGround</a>
+                <a href="/mg/infodaily">Información de MusicDaily</a>
+                <a href="/mg/infoempresa">Información de la Empresa</a>
+                <a href="/mg/prensa">Información de Prensa</a>
+            </div>
+            <div class="footer-column">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                        <a href="https://www.instagram.com/realmusicground/"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://x.com/MusicGroundMx"><i class='bx bxl-twitter'></i></a>
+                        <a href="https://youtube.com/@musicground-c2l?si=zg02KjWzjbkq0rc0"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 MusicGround. Donde vive toda escena musical.</p>
+    </div>
+</footer>
+
+<script>
+    // Reveal animations on scroll
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    function checkReveal() {
+        const windowHeight = window.innerHeight;
+        const revealThreshold = 100;
+        
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight - revealThreshold) {
+                element.classList.add('revealed');
+            }
+        });
+    }
+    
+    // Active section highlighting on scroll
+    const sections = document.querySelectorAll('.terms-section');
+    const navLinks = document.querySelectorAll('.sidebar-nav a, .toc-nav a');
+    
+    function updateActiveSection() {
+        let current = '';
+        const scrollPosition = window.scrollY + 120;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (href && href.substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === "#" || targetId === "") return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.pushState(null, null, targetId);
+            }
+        });
+    });
+    
+    // Initialize
+    window.addEventListener('scroll', () => {
+        checkReveal();
+        updateActiveSection();
+    });
+    window.addEventListener('load', () => {
+        checkReveal();
+        updateActiveSection();
+    });
+</script>
+
+</body>
+</html>

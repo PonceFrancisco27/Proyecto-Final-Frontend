@@ -1,0 +1,583 @@
+/* eventos.css - Estilos para la página de eventos */
+
+/* Container principal */
+.eventos-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 40px 60px;
+}
+
+/* ========== HEADER CON PRESENTACIÓN ========== */
+.eventos-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.header-badge i {
+    font-size: 1.1rem;
+}
+
+.eventos-header h1 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -0.02em;
+}
+
+.eventos-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.organizer-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 255, 76, 0.08);
+    border: 1px solid var(--border-accent);
+    border-radius: 40px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.organizer-info i {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--accent), #00cc3d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ========== SECCIONES GENERALES ========== */
+.section-row {
+    margin-bottom: 60px;
+}
+
+.section-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}
+
+.title-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mg-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent), #00cc3d);
+    color: var(--bg-deep);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 15px;
+    letter-spacing: 0.5px;
+    width: fit-content;
+}
+
+.section-title-main {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.view-all-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.view-all-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* ========== GRID DE 7 COLUMNAS ========== */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+}
+
+/* ========== TARJETA DE EVENTO ========== */
+.event-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    background: var(--bg-card-hover);
+    border-color: var(--border-accent);
+}
+
+.event-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.05);
+}
+
+.event-date {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 15px;
+    letter-spacing: 0.5px;
+}
+
+.mg-flag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--accent);
+    color: var(--bg-deep);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 15px;
+    letter-spacing: 0.5px;
+}
+
+.mg-flag.festival {
+    background: linear-gradient(135deg, #ff00cc, #333399);
+    color: white;
+}
+
+.event-info {
+    padding: 12px;
+}
+
+.event-organizer {
+    font-size: 0.65rem;
+    color: var(--accent);
+    margin-bottom: 5px;
+    letter-spacing: 0.3px;
+}
+
+.event-card h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.event-card p {
+    font-size: 0.7rem;
+    color: var(--text-faint);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 6px;
+}
+
+.event-meta {
+    display: flex;
+    gap: 10px;
+    font-size: 0.65rem;
+    color: var(--text-faint);
+    margin-bottom: 8px;
+}
+
+.event-meta span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.event-meta i {
+    font-size: 0.8rem;
+}
+
+.event-price {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.mg-benefit {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    background: var(--accent-dim);
+    padding: 4px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 6px;
+}
+
+/* Eventos destacados con borde especial */
+.event-card.mg-event {
+    border-left: 3px solid var(--accent);
+}
+
+.event-card.mg-festival {
+    border-left: 3px solid #ff00cc;
+}
+
+.event-card.presale .event-date {
+    background: #ff00cc;
+    color: white;
+}
+
+/* ========== SECCIÓN DE BENEFICIOS ========== */
+.benefits-section {
+    background: linear-gradient(135deg, rgba(0, 255, 76, 0.1), rgba(0, 204, 61, 0.05));
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius);
+    padding: 30px 40px;
+    margin: 40px 0 50px;
+}
+
+.benefits-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.benefits-icon i {
+    font-size: 48px;
+    color: var(--accent);
+}
+
+.benefits-text {
+    flex: 1;
+}
+
+.benefits-text h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.benefits-text p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.benefits-list span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.benefits-list i {
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+.benefits-btn {
+    background: linear-gradient(135deg, var(--accent), #00cc3d);
+    border: none;
+    color: var(--bg-deep);
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.benefits-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ========== SELLOS DE CONFIANZA ========== */
+.trust-seals {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 50px 0 20px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.trust-item i {
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    background: #070712;
+    padding: 60px 20px 20px;
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.footer-logo i {
+    font-size: 26px;
+    color: var(--accent);
+}
+
+.footer-logo span {
+    background: linear-gradient(135deg, #fff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.footer-column h4 {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.footer-column a {
+    display: block;
+    color: var(--text-faint);
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+}
+
+.footer-column a:hover {
+    color: var(--accent);
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: var(--text-faint);
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.social-icons a:hover {
+    background: var(--accent-dim);
+    border-color: var(--border-accent);
+    color: var(--accent);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-faint);
+    font-size: 13px;
+}
+
+/* ========== SCROLL REVEAL ========== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1400px) {
+    .items-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .items-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .items-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .eventos-container {
+        padding: 100px 20px 40px;
+    }
+    
+    .benefits-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .benefits-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .items-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .section-title-main {
+        font-size: 1.2rem;
+    }
+    
+    .eventos-header h1 {
+        font-size: 2rem;
+    }
+    
+    .trust-seals {
+        gap: 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .items-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .section-title-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .benefits-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .items-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .eventos-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .trust-seals {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .organizer-info {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+}
